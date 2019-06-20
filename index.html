@@ -232,7 +232,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://hafung.top/2019/03/06/A-real-Hello-World/">
+    <link itemprop="mainEntityOfPage" href="https://hafung.top/2019/06/20/记一次svn连接错误/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Xavier Ha">
@@ -251,7 +251,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2019/03/06/A-real-Hello-World/" itemprop="url">A real 'Hello World'</a></h1>
+                <a class="post-title-link" href="/2019/06/20/记一次svn连接错误/" itemprop="url">记一次svn连接错误</a></h1>
         
 
         <div class="post-meta">
@@ -263,8 +263,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-03-06T15:21:56+08:00">
-                2019-03-06
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-06-20T14:13:06+08:00">
+                2019-06-20
               </time>
             
 
@@ -303,19 +303,159 @@
       
         
           
-            <p>上一篇是hexo测试自动生成的post, so doesn’t count for me.</p>
-<h3 id="Here-are-the-some-plans-for-me-in-2019-roughly-is-about-‘Programming’"><a href="#Here-are-the-some-plans-for-me-in-2019-roughly-is-about-‘Programming’" class="headerlink" title="Here are the some plans for me in 2019, roughly is about ‘Programming’:"></a>Here are the some plans for me in 2019, roughly is about ‘Programming’:</h3><ul>
-<li><p>p1: Learn Golang, and use it in project which is running in Production Env</p>
-</li>
-<li><p>p2: 重拾Node.js, 学习下egg.js</p>
-</li>
-<li><p>p1: 学习python, 尝试爬取某些网站的数据</p>
-</li>
-<li><p>p1: 将OKR实践于生活, more than work!</p>
-</li>
-<li><p>Next Post -&gt; &lt;关于编程的本质与程序员如何自我成长&gt;</p>
-</li>
+            <h3 id="一次svn连接错误-由于目标计算机积极拒绝-无法连接"><a href="#一次svn连接错误-由于目标计算机积极拒绝-无法连接" class="headerlink" title="一次svn连接错误: 由于目标计算机积极拒绝, 无法连接"></a>一次svn连接错误: 由于目标计算机积极拒绝, 无法连接</h3><blockquote>
+<p>实际上svn在目前工作中已经用的很少了，基本是以git为主了；svn主要是维护一些旧repo会用到…</p>
+</blockquote>
+<ul>
+<li>执行 <figure class="highlight ps"><figcaption><span>aux | grep svnserve```; 正常应显示如下:</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">```</span><br><span class="line">root      <span class="number">1285</span>  <span class="number">0.0</span>  <span class="number">0.0</span>  <span class="number">66764</span>   <span class="number">840</span> ?        Ss   Feb21   <span class="number">0</span>:<span class="number">00</span> svnserve -d -r /var/opt/svn/ --listen-port <span class="number">11810</span></span><br><span class="line">root     <span class="number">17588</span>  <span class="number">0.0</span>  <span class="number">0.0</span>  <span class="number">11740</span>   <span class="number">940</span> pts/<span class="number">0</span>    S+   <span class="number">15</span>:<span class="number">29</span>   <span class="number">0</span>:<span class="number">00</span> grep --color=auto svnserve</span><br></pre></td></tr></table></figure></li>
 </ul>
+<p>实际显示:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">root     18056  0.0  0.0  14228   864 pts/0    S+   15:29   0:00 grep --color=auto svnserve</span><br></pre></td></tr></table></figure></p>
+<p>相关端口并没有被使用\监听, SVN服务未开启…</p>
+<ul>
+<li>执行<figure class="highlight plain"><figcaption><span>-d -r</span><a href="/var/opt/svn```重启服务,">再执行```ps aux | grep svnserve```; ```/var/opt/svn```为svn安装路径, 可以先执行```find / -name svn```查看得到</a></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">```</span><br><span class="line">root     18067  0.0  0.0  73488   944 ?        Ss   15:33   0:00 svnserve -d -r /var/opt/svn</span><br><span class="line">root     18071  0.0  0.0  14228   956 pts/0    S+   15:33   0:00 grep --color=auto svnserve</span><br></pre></td></tr></table></figure></li>
+</ul>
+<blockquote>
+<p>这里的svn使用的是默认端口3690, 所以默认不显示</p>
+</blockquote>
+<ul>
+<li>或执行<figure class="highlight plain"><figcaption><span>-ntlp```查看：</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">```</span><br><span class="line">tcp        0      0 127.0.0.1:6010          0.0.0.0:*               LISTEN      17990/0         </span><br><span class="line">tcp        0      0 0.0.0.0:443             0.0.0.0:*               LISTEN      888/nginx -g daemon</span><br><span class="line">tcp        0      0 0.0.0.0:3690            0.0.0.0:*               LISTEN      18067/svnserve  </span><br><span class="line">tcp        0      0 127.0.0.1:3306          0.0.0.0:*               LISTEN      2641/mysqld     </span><br><span class="line">tcp        0      0 127.0.0.1:6379          0.0.0.0:*               LISTEN      12092/redis-server </span><br><span class="line">tcp        0      0 0.0.0.0:80              0.0.0.0:*               LISTEN      888/nginx -g daemon</span><br><span class="line">tcp        0      0 0.0.0.0:22              0.0.0.0:*               LISTEN      756/sshd        </span><br><span class="line">tcp6       0      0 :::80                   :::*                    LISTEN      888/nginx -g daemon</span><br><span class="line">tcp6       0      0 :::21                   :::*                    LISTEN      789/vsftpd</span><br></pre></td></tr></table></figure></li>
+</ul>
+<p>ok, 一切正常!</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://hafung.top/2019/04/30/CMS-二次开发-PHPer的非典型特征/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Xavier Ha">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="HaFung's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/04/30/CMS-二次开发-PHPer的非典型特征/" itemprop="url">CMS_二次开发_PHPer的非典型概述</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-04-30T10:23:09+08:00">
+                2019-04-30
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h3 id="通常始于二次开发"><a href="#通常始于二次开发" class="headerlink" title="通常始于二次开发"></a>通常始于二次开发</h3><p>基于各种开源cms系统的各种二次开发，而且是很早期的版本，大搞率是已经停止维护的后台管理系统，技术栈各种老旧。</p>
+<p>PHP端通常是与前端(这个时候只能称为模板)强耦合，页面由服务端(PHP)渲染，而非前端异步请求渲染，更不用说前后端分离、SSR等等…</p>
+<p>前端的技术栈通常的早期版本jQuery，然后是上古时代的基于jQuery的UI框架，比如easyUI。</p>
+<p>PHP绝对是5.6以下的，框架里连命名空间都不用，没有统一使用composer的自动加载，没有遵循PSR规范等等</p>
+<p>……</p>
+<h3 id="真正的「一把梭」"><a href="#真正的「一把梭」" class="headerlink" title="真正的「一把梭」"></a>真正的「一把梭」</h3><p>这种的程序员，不管初心如何，写的代码基本是各种复制粘贴，在既有框架架构下。</p>
+<p>他们无力重构，无力脱离\改变既有架构，当然也可能不敢，因为没有能力给出具体解决方案去说服老板；所以最大的可能就是能力问题，否则是可以做到渐进式的迭代。</p>
+<p>这种程序员其实是最大限度的得益于PHP的简单、灵活，无需关注太多编程的基础，一个Array就可以处理基本所有业务，大可不必关注\引入其他数据结构。当然，这是PHP的优点。</p>
+<p>基于各种复制粘贴，那必然是没有任何架构、任何设计模式可言；这种代码我是见过的：全局变量满天飞，各种逻辑重复，没什么抽象封装，随处可见的面条式代码，foreach循环里执行sql的插入语句……</p>
+<p>什么PSR规范、SPL、Composer、Laravel、Swoole…<br>什么异步非阻塞、协程、多线程(虽然PHP的多线程比较鸡肋)、并发、锁、缓存、消息队列…<br>这些PHP世界以及编程世界里比较先进\基础的概念\工具，通常是没听过或者没用过。</p>
+<p>然后呢，开发一段时间后，他们便无力开发所谓的新「模块」了，只能把精力放在「维护」上了，尽管到那个时候只是「维护」都已经很费劲了。</p>
+<h3 id="会一些「让老板觉得很赚」的附加技能"><a href="#会一些「让老板觉得很赚」的附加技能" class="headerlink" title="会一些「让老板觉得很赚」的附加技能"></a>会一些「让老板觉得很赚」的附加技能</h3><p>这类程序员通常会一些基础的Linux，让老板「节省」了运维的工作。</p>
+<p>当然持续集成，持续部署是没有的，devOps是不同次元的东西，k8s? Docker? sorry，小公司用不上。</p>
+<p>通常是只用svn的，用git的话也是当svn用，直接在master分支开发，还会嫌git不如svn，因为还得到线上再pull一下(没有持续集成)…</p>
+<p>服务器的安全、数据库的安全是没有纳入考虑的，虽然也不需要，小公司的项目\业务一般是还没上线或者没什么人用，没有人会关心到这块。</p>
+<h3 id="解决方案"><a href="#解决方案" class="headerlink" title="解决方案"></a>解决方案</h3><p>打破边界，打开眼界 -&gt; 提高对自身的要求，不断积累、总结实际经验\理论知识，花更多时间去review自己的代码 -&gt; 尽快辞职，加入专业的团队或者改变现状(通常更难)</p>
 
           
         
@@ -435,15 +575,10 @@
       
         
           
-            <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
+            <h3 id="Hello-world"><a href="#Hello-world" class="headerlink" title="Hello world"></a>Hello world</h3><p>个人域名办了很久了，一直荒废着。</p>
+<p>某天，想到可以用下GitHub的服务。于是，使用Hexo简单搭了个Blog。</p>
+<p>之后会间断的发一些post，记录一些技术相关的东西以及其他。</p>
+<p>That’s it.</p>
 
           
         
@@ -525,7 +660,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">2</span>
+                  <span class="site-state-item-count">3</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
