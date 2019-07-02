@@ -79,17 +79,17 @@
 
 
 
-<meta name="description" content="一次svn连接错误: 由于目标计算机积极拒绝, 无法连接 实际上svn在目前工作中已经用的很少了，基本是以git为主了；svn主要是维护一些旧repo会用到…   执行 aux | grep svnserve```; 正常应显示如下:123```root      1285  0.0  0.0  66764   840 ?        Ss   Feb21   0:00 svnserve -d">
+<meta name="description" content="svn连接错误报错: 由于目标计算机积极拒绝, 无法连接 实际上svn在目前工作中已经用的很少了，基本是以git为主了；svn主要是维护一些旧repo会用到…  执行 ps aux | grep svnserve ; 正常应显示如下: 12root      1285  0.0  0.0  66764   840 ?        Ss   Feb21   0:00 svnserve -d -r">
 <meta property="og:type" content="article">
 <meta property="og:title" content="记一次svn连接错误">
-<meta property="og:url" content="https://hafung.top/2019/06/20/记一次svn连接错误/index.html">
+<meta property="og:url" content="https://hafung.top/2019/05/20/记一次svn连接错误/index.html">
 <meta property="og:site_name" content="HaFung&#39;s Blog">
-<meta property="og:description" content="一次svn连接错误: 由于目标计算机积极拒绝, 无法连接 实际上svn在目前工作中已经用的很少了，基本是以git为主了；svn主要是维护一些旧repo会用到…   执行 aux | grep svnserve```; 正常应显示如下:123```root      1285  0.0  0.0  66764   840 ?        Ss   Feb21   0:00 svnserve -d">
+<meta property="og:description" content="svn连接错误报错: 由于目标计算机积极拒绝, 无法连接 实际上svn在目前工作中已经用的很少了，基本是以git为主了；svn主要是维护一些旧repo会用到…  执行 ps aux | grep svnserve ; 正常应显示如下: 12root      1285  0.0  0.0  66764   840 ?        Ss   Feb21   0:00 svnserve -d -r">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-06-20T06:15:02.220Z">
+<meta property="og:updated_time" content="2019-06-21T03:35:48.555Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="记一次svn连接错误">
-<meta name="twitter:description" content="一次svn连接错误: 由于目标计算机积极拒绝, 无法连接 实际上svn在目前工作中已经用的很少了，基本是以git为主了；svn主要是维护一些旧repo会用到…   执行 aux | grep svnserve```; 正常应显示如下:123```root      1285  0.0  0.0  66764   840 ?        Ss   Feb21   0:00 svnserve -d">
+<meta name="twitter:description" content="svn连接错误报错: 由于目标计算机积极拒绝, 无法连接 实际上svn在目前工作中已经用的很少了，基本是以git为主了；svn主要是维护一些旧repo会用到…  执行 ps aux | grep svnserve ; 正常应显示如下: 12root      1285  0.0  0.0  66764   840 ?        Ss   Feb21   0:00 svnserve -d -r">
 
 
 
@@ -119,7 +119,7 @@
 
 
 
-  <link rel="canonical" href="https://hafung.top/2019/06/20/记一次svn连接错误/">
+  <link rel="canonical" href="https://hafung.top/2019/05/20/记一次svn连接错误/">
 
 
 
@@ -232,7 +232,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://hafung.top/2019/06/20/记一次svn连接错误/">
+    <link itemprop="mainEntityOfPage" href="https://hafung.top/2019/05/20/记一次svn连接错误/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Xavier Ha">
@@ -261,8 +261,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-06-20T14:13:06+08:00">
-                2019-06-20
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-05-20T14:13:06+08:00">
+                2019-05-20
               </time>
             
 
@@ -299,23 +299,21 @@
       
 
       
-        <h3 id="一次svn连接错误-由于目标计算机积极拒绝-无法连接"><a href="#一次svn连接错误-由于目标计算机积极拒绝-无法连接" class="headerlink" title="一次svn连接错误: 由于目标计算机积极拒绝, 无法连接"></a>一次svn连接错误: 由于目标计算机积极拒绝, 无法连接</h3><blockquote>
+        <h4 id="svn连接错误报错-由于目标计算机积极拒绝-无法连接"><a href="#svn连接错误报错-由于目标计算机积极拒绝-无法连接" class="headerlink" title="svn连接错误报错: 由于目标计算机积极拒绝, 无法连接"></a>svn连接错误报错: 由于目标计算机积极拒绝, 无法连接</h4><blockquote>
 <p>实际上svn在目前工作中已经用的很少了，基本是以git为主了；svn主要是维护一些旧repo会用到…</p>
 </blockquote>
-<ul>
-<li>执行 <figure class="highlight ps"><figcaption><span>aux | grep svnserve```; 正常应显示如下:</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">```</span><br><span class="line">root      <span class="number">1285</span>  <span class="number">0.0</span>  <span class="number">0.0</span>  <span class="number">66764</span>   <span class="number">840</span> ?        Ss   Feb21   <span class="number">0</span>:<span class="number">00</span> svnserve -d -r /var/opt/svn/ --listen-port <span class="number">11810</span></span><br><span class="line">root     <span class="number">17588</span>  <span class="number">0.0</span>  <span class="number">0.0</span>  <span class="number">11740</span>   <span class="number">940</span> pts/<span class="number">0</span>    S+   <span class="number">15</span>:<span class="number">29</span>   <span class="number">0</span>:<span class="number">00</span> grep --color=auto svnserve</span><br></pre></td></tr></table></figure></li>
-</ul>
-<p>实际显示:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">root     18056  0.0  0.0  14228   864 pts/0    S+   15:29   0:00 grep --color=auto svnserve</span><br></pre></td></tr></table></figure></p>
+<p>执行 <code>ps aux | grep svnserve</code> ; 正常应显示如下:</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">root      1285  0.0  0.0  66764   840 ?        Ss   Feb21   0:00 svnserve -d -r /var/opt/svn/ --listen-port 11810</span><br><span class="line">root     17588  0.0  0.0  11740   940 pts/0    S+   15:29   0:00 grep --color=auto svnserve</span><br></pre></td></tr></table></figure>
+<p>实际显示:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">root     18056  0.0  0.0  14228   864 pts/0    S+   15:29   0:00 grep --color=auto svnserve</span><br></pre></td></tr></table></figure>
 <p>相关端口并没有被使用\监听, SVN服务未开启…</p>
-<ul>
-<li>执行<figure class="highlight plain"><figcaption><span>-d -r</span><a href="/var/opt/svn```重启服务,">再执行```ps aux | grep svnserve```; ```/var/opt/svn```为svn安装路径, 可以先执行```find / -name svn```查看得到</a></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">```</span><br><span class="line">root     18067  0.0  0.0  73488   944 ?        Ss   15:33   0:00 svnserve -d -r /var/opt/svn</span><br><span class="line">root     18071  0.0  0.0  14228   956 pts/0    S+   15:33   0:00 grep --color=auto svnserve</span><br></pre></td></tr></table></figure></li>
-</ul>
+<p>执行 <code>svnserve -d -r /var/opt/svn</code> 重启服务, 再执行<code>ps aux | grep svnserve</code> ; <code>/var/opt/svn</code> 为svn安装路径, 可以先执行 <code>find / -name svn</code> 查看得到</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">root     18067  0.0  0.0  73488   944 ?        Ss   15:33   0:00 svnserve -d -r /var/opt/svn</span><br><span class="line">root     18071  0.0  0.0  14228   956 pts/0    S+   15:33   0:00 grep --color=auto svnserve</span><br></pre></td></tr></table></figure>
 <blockquote>
 <p>这里的svn使用的是默认端口3690, 所以默认不显示</p>
 </blockquote>
-<ul>
-<li>或执行<figure class="highlight plain"><figcaption><span>-ntlp```查看：</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">```</span><br><span class="line">tcp        0      0 127.0.0.1:6010          0.0.0.0:*               LISTEN      17990/0         </span><br><span class="line">tcp        0      0 0.0.0.0:443             0.0.0.0:*               LISTEN      888/nginx -g daemon</span><br><span class="line">tcp        0      0 0.0.0.0:3690            0.0.0.0:*               LISTEN      18067/svnserve  </span><br><span class="line">tcp        0      0 127.0.0.1:3306          0.0.0.0:*               LISTEN      2641/mysqld     </span><br><span class="line">tcp        0      0 127.0.0.1:6379          0.0.0.0:*               LISTEN      12092/redis-server </span><br><span class="line">tcp        0      0 0.0.0.0:80              0.0.0.0:*               LISTEN      888/nginx -g daemon</span><br><span class="line">tcp        0      0 0.0.0.0:22              0.0.0.0:*               LISTEN      756/sshd        </span><br><span class="line">tcp6       0      0 :::80                   :::*                    LISTEN      888/nginx -g daemon</span><br><span class="line">tcp6       0      0 :::21                   :::*                    LISTEN      789/vsftpd</span><br></pre></td></tr></table></figure></li>
-</ul>
+<p>或执行 <code>netstat -ntlp</code> 查看：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">tcp        0      0 127.0.0.1:6010          0.0.0.0:*               LISTEN      17990/0         </span><br><span class="line">tcp        0      0 0.0.0.0:443             0.0.0.0:*               LISTEN      888/nginx -g daemon</span><br><span class="line">tcp        0      0 0.0.0.0:3690            0.0.0.0:*               LISTEN      18067/svnserve  </span><br><span class="line">tcp        0      0 127.0.0.1:3306          0.0.0.0:*               LISTEN      2641/mysqld     </span><br><span class="line">tcp        0      0 127.0.0.1:6379          0.0.0.0:*               LISTEN      12092/redis-server </span><br><span class="line">tcp        0      0 0.0.0.0:80              0.0.0.0:*               LISTEN      888/nginx -g daemon</span><br><span class="line">tcp        0      0 0.0.0.0:22              0.0.0.0:*               LISTEN      756/sshd        </span><br><span class="line">tcp6       0      0 :::80                   :::*                    LISTEN      888/nginx -g daemon</span><br><span class="line">tcp6       0      0 :::21                   :::*                    LISTEN      789/vsftpd</span><br></pre></td></tr></table></figure>
 <p>ok, 一切正常!</p>
 
       
@@ -341,8 +339,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/04/30/CMS-二次开发-PHPer的非典型特征/" rel="next" title="CMS_二次开发_PHPer的非典型概述">
-                <i class="fa fa-chevron-left"></i> CMS_二次开发_PHPer的非典型概述
+              <a href="/2019/04/30/CMS-二次开发-PHPer的非典型特征/" rel="next" title="cms_二次开发_PHPer的非典型概述">
+                <i class="fa fa-chevron-left"></i> cms_二次开发_PHPer的非典型概述
               </a>
             
           </div>
@@ -350,6 +348,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2019/06/27/面试题集-前端篇-从基础到进阶-附带个人讲解点评/" rel="prev" title="面试散记[前端篇]-从基础到进阶---附带个人讲解点评">
+                面试散记[前端篇]-从基础到进阶---附带个人讲解点评 <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -426,7 +428,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">3</span>
+                  <span class="site-state-item-count">4</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -463,7 +465,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#一次svn连接错误-由于目标计算机积极拒绝-无法连接"><span class="nav-number">1.</span> <span class="nav-text">一次svn连接错误: 由于目标计算机积极拒绝, 无法连接</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#svn连接错误报错-由于目标计算机积极拒绝-无法连接"><span class="nav-number">1.</span> <span class="nav-text">svn连接错误报错: 由于目标计算机积极拒绝, 无法连接</span></a></li></ol></div>
             
 
           </div>
