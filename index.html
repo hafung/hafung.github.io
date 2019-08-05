@@ -232,6 +232,133 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://hafung.top/2019/07/03/面试散记-后端篇-从基础到进阶-附带个人讲解点评/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Xavier Ha">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="HaFung's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/07/03/面试散记-后端篇-从基础到进阶-附带个人讲解点评/" itemprop="url">面试散记-后端篇-从基础到进阶-附带个人讲解点评</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-07-03T09:31:04+08:00">
+                2019-07-03
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <blockquote>
+<p><em>以下引用部分为个人的注解，其余为个人的归纳和总结</em></p>
+</blockquote>
+<h2 id="PHP"><a href="#PHP" class="headerlink" title="PHP"></a>PHP</h2><h3 id="PHP面向对象的一些概述"><a href="#PHP面向对象的一些概述" class="headerlink" title="PHP面向对象的一些概述"></a>PHP面向对象的一些概述</h3>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2019/07/03/面试散记-后端篇-从基础到进阶-附带个人讲解点评/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="https://hafung.top/2019/06/27/面试题集-前端篇-从基础到进阶-附带个人讲解点评/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -302,196 +429,20 @@
 
       
         
-          
-            <blockquote>
+          <blockquote>
 <p><em>以下所有引用部分为个人的注解，其余部分为个人的归纳和总结</em></p>
 </blockquote>
 <blockquote>
 <p><strong>可能是琐碎零散的记录，但会做一定的延展，实质也是对知识点的大致的一个梳理；偏向于理论以及运行原理\程序原理的解释，尽量不涉及具体某些题目，尤其是比较脱离实际业务的各种奇淫巧计</strong></p>
 </blockquote>
-<h3 id="快速理解JavaScript的面向对象"><a href="#快速理解JavaScript的面向对象" class="headerlink" title="快速理解JavaScript的面向对象"></a>快速理解JavaScript的面向对象</h3><p>面向对象的三大特点：继承、封装、多态</p>
-<ol>
-<li>JS中通过prototype实现原型继承</li>
-<li>JS对象可以通过对象冒充，实现多重继承</li>
-<li>Object类是所有Js类的基类</li>
-<li>通过function对对象进行封装</li>
-<li>通过使用arguments实现参数重载</li>
-<li>ES6语法糖可以直接定义类class, 继承对象extends</li>
-</ol>
-<h3 id="JavaScript的8种数据类型"><a href="#JavaScript的8种数据类型" class="headerlink" title="JavaScript的8种数据类型"></a>JavaScript的8种数据类型</h3><ol>
-<li>基本数据类型</li>
-</ol>
-<ul>
-<li><p>Undefined:代表一切未知的事物，啥都没有，无法想象，代码也就更无法去处理了。</p>
-<blockquote>
-<p>注意：typeof(Undefined) 返回也是 Undefined。可以将Undefined赋值给任何变量或属性，但并不意味了清除了该变量，反而会因此多了一个属性。</p>
-</blockquote>
-</li>
-<li><p>Null: 代表<code>无</code>，也是对象。</p>
-<blockquote>
-<p>注意：typeof(Null)返回Object，但Null并非Object，具有Null值的变量也并非object。</p>
-</blockquote>
-</li>
-<li><p>Boolean:布尔类型，true or false，是就是，非就非，没有疑义。对就对，错就错，绝对明确。既能被代码处理，也可以控制代码的流程。</p>
-</li>
-<li><p>Number:线性的事物，大小和次序分明，多而不乱。便于代码进行批量处理，也控制代码的迭代和循环等。</p>
-<blockquote>
-<p>注意：typeof(NaN)和typeof(Infinity)都返回number 。NaN参与任何数值计算的结构都是NaN，而且 NaN != NaN 。Infinity / Infinity = NaN 。 </p>
-</blockquote>
-</li>
-<li><p>String:字符串类型，面向人类的理性事物，而不是机器信号。人机信息沟通，代码据此理解人的意图等等，都靠它了。</p>
-</li>
-</ul>
-<ol start="2">
-<li>引用数据类型：Object、Array、Function</li>
-</ol>
-<blockquote>
-<p>es6新增的map, set, symbol(基础类型, 创建后独一无二且不可变的数据类型)；另外说</p>
-</blockquote>
-<h3 id="ajax请求的原理"><a href="#ajax请求的原理" class="headerlink" title="ajax请求的原理"></a>ajax请求的原理</h3><p><strong>通过XMLHttpRequest对象来向服务器发送异步请求，从服务器获取数据；然后用JavaScript来操作DOM而更新页面</strong></p>
-<p><strong>关键词：异步，http请求，客户端发起，回调，…</strong></p>
-<p>简单的说，也就是JavaScript可以及时的向服务器提出请求并及时响应。而不阻塞用户。达到无刷新效果。</p>
-<p>由事件触发，创建一个XMLHttpRequest对象，把HTTP方法 （POST/GET）和目标URL以及请求返回后的回调函数设置到XMLHttpRequest对象，通过XMLHttpRequest向服务器发送请求，请求发送后继续响应用户的界面交互，只有等到请求真正从服务器返回的时候才调用callback()函数，对响应数据进行处理。</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 代码略</span></span><br><span class="line"><span class="comment">// JSONP代码示例 -原生js</span></span><br><span class="line">(<span class="function"><span class="keyword">function</span> (<span class="params">global</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">var</span> id = <span class="number">0</span>,</span><br><span class="line">        container = <span class="built_in">document</span>.getElementsByTagName(<span class="string">"head"</span>)[<span class="number">0</span>];</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">function</span> <span class="title">jsonp</span>(<span class="params">options</span>) </span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(!options || !options.url) <span class="keyword">return</span>;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">var</span> scriptNode = <span class="built_in">document</span>.createElement(<span class="string">"script"</span>),</span><br><span class="line">            data = options.data || &#123;&#125;,</span><br><span class="line">            url = options.url,</span><br><span class="line">            callback = options.callback,</span><br><span class="line">            fnName = <span class="string">"jsonp"</span> + id++;</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 添加回调函数</span></span><br><span class="line">        data[<span class="string">"callback"</span>] = fnName;</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 拼接url</span></span><br><span class="line">        <span class="keyword">var</span> params = [];</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">var</span> key <span class="keyword">in</span> data) &#123;</span><br><span class="line">            params.push(<span class="built_in">encodeURIComponent</span>(key) + <span class="string">"="</span> + <span class="built_in">encodeURIComponent</span>(data[key]));</span><br><span class="line">        &#125;</span><br><span class="line">        url = url.indexOf(<span class="string">"?"</span>) &gt; <span class="number">0</span> ? (url + <span class="string">"&amp;"</span>) : (url + <span class="string">"?"</span>);</span><br><span class="line">        url += params.join(<span class="string">"&amp;"</span>);</span><br><span class="line">        scriptNode.src = url;</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 传递的是一个匿名的回调函数，要执行的话，暴露为一个全局方法</span></span><br><span class="line">        global[fnName] = <span class="function"><span class="keyword">function</span> (<span class="params">ret</span>) </span>&#123;</span><br><span class="line">            callback &amp;&amp; callback(ret);</span><br><span class="line">            container.removeChild(scriptNode);</span><br><span class="line">            <span class="keyword">delete</span> global[fnName];</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 出错处理</span></span><br><span class="line">        scriptNode.onerror = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">            callback &amp;&amp; callback(&#123;<span class="attr">error</span>:<span class="string">"error"</span>&#125;);</span><br><span class="line">            container.removeChild(scriptNode);</span><br><span class="line">            global[fnName] &amp;&amp; <span class="keyword">delete</span> global[fnName];</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        scriptNode.type = <span class="string">"text/javascript"</span>;</span><br><span class="line">        container.appendChild(scriptNode)</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    global.jsonp = jsonp;</span><br><span class="line"></span><br><span class="line">&#125;)(<span class="keyword">this</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">// 使用示例</span></span><br><span class="line">jsonp(&#123;</span><br><span class="line">    url : <span class="string">"www.example.com"</span>,</span><br><span class="line">    data : &#123;<span class="attr">id</span> : <span class="number">1</span>&#125;,</span><br><span class="line">    callback : <span class="function"><span class="keyword">function</span> (<span class="params">ret</span>) </span>&#123;</span><br><span class="line">        <span class="built_in">console</span>.log(ret);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line"><span class="comment">// 使用jQuery的jsonp</span></span><br><span class="line">$.ajax(&#123;</span><br><span class="line">    type: <span class="string">"GET"</span>, <span class="comment">// 只能是get，设置其他值也会转成get</span></span><br><span class="line">    url: <span class="string">"http://localhost:9524/Home/ProcessCallback"</span>, <span class="comment">// 这个就是不同于当前域的一个URL地址，这里单纯演示，所以同域</span></span><br><span class="line">    dataType: <span class="string">"jsonp"</span>, <span class="comment">//必须指定</span></span><br><span class="line">    <span class="comment">// jsonp: "jsonpcallback",  // 不指定则默认为callback；指定回调函数，这里名字可以为其他任意你喜欢的，比如callback，不过必须与下一行的GET参数一致</span></span><br><span class="line">    <span class="comment">// jsonpcallbac: 'yourFunc',</span></span><br><span class="line">    data: <span class="string">"name=jxq&amp;email=feichexia@yahoo.com.cn&amp;jsonpcallback=?"</span>, <span class="comment">// ~~jsonpcallback与上面的jsonp值一致，jsonpcallback的值为了让后端知道前端的指定回调函数名~~；这里放其他数据即可，jsonp以及jsonpCallback或自动拼接到url，jsonpCallback可以不指定，直接使用jQuery的success回调就好 - jq的全局函数回调</span></span><br><span class="line">    success: <span class="function"><span class="keyword">function</span> (<span class="params">json</span>) </span>&#123;</span><br><span class="line">        alert(json.Name);</span><br><span class="line">        alert(json.Email);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">// 服务端代码简单示例(PHP)</span></span><br><span class="line"><span class="comment">// callback定义了一个函数名，而远程服务端通过调用指定的函数并传入参数来实现传递参数，将fn(response)传递回客户端</span></span><br><span class="line">$callback = !empty($_GET[<span class="string">'callback'</span>]) ? $_GET[<span class="string">'callback'</span>] : <span class="string">'callback'</span>; <span class="comment">//get接收jsonp自动生成的函数名</span></span><br><span class="line">header(<span class="string">'content-type: application/json'</span>);</span><br><span class="line">echo $callback.<span class="string">'(.json_encode($data).)'</span>; <span class="comment">// //jsonp函数名(前端的回调函数名)包裹json数据, $data是要返回的数据</span></span><br></pre></td></tr></table></figure>
-<h3 id="关于跨域"><a href="#关于跨域" class="headerlink" title="关于跨域"></a>关于<strong>跨域</strong></h3><blockquote>
-<p>跨域本质是浏览器的为了安全起见的一种限制，不符合同源策略的都算跨域，服务端的请求不存在跨域…</p>
-</blockquote>
-<p>同源策略指的是：协议，域名，端口相同，同源策略是一种安全协议。指一段脚本只能读取来自同一来源的窗口和文档的属性。</p>
-<p>常用解决方案：</p>
-<ol>
-<li><p>jsonp</p>
-<blockquote>
-<p>原理是动态插入script标签，只能模拟get请求, 需要服务端配合</p>
-</blockquote>
-</li>
-<li><p>CORS</p>
-<blockquote>
-<p>需要后端配合，前端无需作特殊处理</p>
-</blockquote>
-</li>
-<li><p>nginx反向代理-转发请求</p>
-<blockquote>
-<p>需要后端人员\运维配合</p>
-</blockquote>
-</li>
-</ol>
-<h3 id="异步-Promise-async-await"><a href="#异步-Promise-async-await" class="headerlink" title="异步\Promise\async-await"></a>异步\Promise\async-await</h3><blockquote>
-<p>题外话-&gt; <code>说实话，有异步编程思维的程序员和没有异步思维的程序员基本是两个维度的程序员；后者是妥妥的码农了</code></p>
-</blockquote>
-<blockquote>
-<p>es6的Promise和es7的async-await，异步编程的一种解决方案，解决了回调地狱这一大痛点</p>
-</blockquote>
-<h3 id="算法-js实现"><a href="#算法-js实现" class="headerlink" title="算法(js实现)"></a>算法(js实现)</h3><ul>
-<li><p>数组去重</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//es5</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">unique</span>(<span class="params">arr</span>)</span>&#123;</span><br><span class="line">    <span class="keyword">var</span> obj = &#123;&#125;</span><br><span class="line">    <span class="keyword">var</span> result = []</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">var</span> i <span class="keyword">in</span> arr)&#123;</span><br><span class="line">        <span class="keyword">if</span>(!obj[arr[i]])&#123;</span><br><span class="line">            obj[arr[i]] = <span class="literal">true</span>;</span><br><span class="line">            result.push(arr[i]);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> result;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//es6</span></span><br><span class="line">[...new <span class="built_in">Set</span>(arr)]</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>数组随机</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 伪随机</span></span><br><span class="line"><span class="keyword">var</span> arr = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>,<span class="number">6</span>,<span class="number">7</span>,<span class="number">8</span>,<span class="number">9</span>,<span class="number">10</span>];</span><br><span class="line">arr.sort(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="built_in">Math</span>.random() - <span class="number">0.5</span>;</span><br><span class="line">&#125;)</span><br><span class="line"><span class="built_in">console</span>.log(arr);</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">randSort1</span>(<span class="params">arr</span>)</span>&#123;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">var</span> i = <span class="number">0</span>,len = arr.length;i &lt; len; i++ )&#123;</span><br><span class="line">        <span class="keyword">var</span> rand = <span class="built_in">parseInt</span>(<span class="built_in">Math</span>.random()*len);</span><br><span class="line">        <span class="keyword">var</span> temp = arr[rand];</span><br><span class="line">        arr[rand] = arr[i];</span><br><span class="line">        arr[i] = temp;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> arr;</span><br><span class="line">&#125;</span><br><span class="line"><span class="built_in">console</span>.log(randSort1(arr));</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">randSort2</span>(<span class="params">arr</span>)</span>&#123;</span><br><span class="line">    <span class="keyword">var</span> mixedArray = [];</span><br><span class="line">    <span class="keyword">while</span>(arr.length &gt; <span class="number">0</span>)&#123;</span><br><span class="line">        <span class="keyword">var</span> randomIndex = <span class="built_in">parseInt</span>(<span class="built_in">Math</span>.random()*arr.length);</span><br><span class="line">        mixedArray.push(arr[randomIndex]);</span><br><span class="line">        arr.splice(randomIndex, <span class="number">1</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> mixedArray;</span><br><span class="line">&#125;</span><br><span class="line"><span class="built_in">console</span>.log(randSort2(arr));</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-<h3 id="闭包（Closure）"><a href="#闭包（Closure）" class="headerlink" title="闭包（Closure）"></a>闭包（Closure）</h3><blockquote>
-<p>闭包的本质是创建块级作用域，保留变量在内存中不被回收(因为用某些方法一些引用了这个变量)；然后es6的let语法出来后，闭包在js前端的场景已经很少了</p>
-</blockquote>
-<h3 id="原型链-原型"><a href="#原型链-原型" class="headerlink" title="原型链\原型"></a>原型链\原型</h3><p>每个JS对象都有一个prototype原型属性，指向该对象继承的原型。</p>
-<p>原型对象上有一个 constructor 属性，该属性指向的就是构造函数。</p>
-<p>而实例对象上有一个 __proto__  属性，该属性也指向原型对象，并且该属性不是标准属性，不可以用在编程中，该属性用于浏览器内部使用。</p>
-<p>原型链：其实就是有限的实例对象和原型之间组成有限链，就是用来实现共享属性和继承的。</p>
-<blockquote>
-<p>JavaScript的继承同其他面向对象的继承是由差异的，js本质是用对象模拟的类，用原型的继承模拟类的继承，以及其他面向对象的一些方法\特征；es6的class也是语法糖，本质也是prototype</p>
-</blockquote>
-<h3 id="关于this"><a href="#关于this" class="headerlink" title="关于this"></a>关于<code>this</code></h3><p>This总是指向一个对象，具体是运行时基于函数的执行环境动态绑定的，而非函数被声明时的环境。</p>
-<p>普通函数调用时，一般指向window对象；</p>
-<p>对象方法调用时，指向该对象；</p>
-<blockquote>
-<p>也就是用<code>new</code>去调用一个方法</p>
-</blockquote>
-<p>如果对象方法里有局部方法，里面的this会指向window对象；</p>
-<blockquote>
-<p>用es6的箭头函数可以维持执行上下文不变，也就是保持this的指向</p>
-</blockquote>
-<p>在ES5模式下，this指向window的都会变成undefined；</p>
-<p>Apply，call时，动态改变this</p>
-<h3 id="Array原型上的一些常用方法"><a href="#Array原型上的一些常用方法" class="headerlink" title="Array原型上的一些常用方法"></a>Array原型上的一些常用方法</h3><p>concat() 连接两个或更多数组</p>
-<blockquote>
-<p>返回新数组，注意该方法只是浅拷贝</p>
-</blockquote>
-<p>splice(index,len,[item]) 删除元素，并向数组添加一个新元素。</p>
-<p>Slice() 从某个已有的数组返回选定的元素</p>
-<p>Join() 把数组的所有元素放入一个字符串，元素通过指定的分隔符进行分割</p>
-<p>push() 在数组后添加元素，并返回新的长度</p>
-<p>unshift() 在数组最前添加元素</p>
-<p>pop() 删除数组最后一个元素并返回该元素的值</p>
-<p>reverse() 颠倒数组中元素的顺序</p>
-<p>shift() 删除并返回数组中第一个元素</p>
-<p>sort() 对数组元素进行排序</p>
-<p>toSource() 返回该对象的源代码</p>
-<p>toString()  把数组转换为字符串并返回结果</p>
-<p>toLocaleString() 把数组转换为本地数组，并返回结果</p>
-<p>valueOf() 返回对象的原始值</p>
-<p><code>map(callback(item, index, array)=&gt;{})</code> 创建一个新数组，其结果是该数组中的每个元素都调用一个提供的函数后返回的结果。</p>
-<p><code>foreach(callback(item, index, array)=&gt;{})</code> 遍历数组，对数组的每个元素执行一次提供的函数; 没有返回</p>
-<blockquote>
-<p>无法return，这点不同于for循环，因为是回调，即使return了也会完整的遍历；与map的不同是，不返回新数组，一般用于对当前数组的修改</p>
-</blockquote>
-<p><code>filter(callback(item, index, array)=&gt;{})</code> 创建一个新数组, 其包含通过所提供函数实现的测试的所有元素。 </p>
-<p><code>find(callback(item, index, array)=&gt;{})</code>  返回数组中满足提供的测试函数的第一个元素的值。否则返回 undefined。</p>
-<p>findIndex() 返回数组中找到的元素的索引，而不是其值</p>
-<p>every()  测试一个数组内的所有元素是否都能通过某个指定函数的测试。它返回一个布尔值。若收到一个空数组，此方法在一切情况下都会返回 true。</p>
-<p>some()   是否至少有一个元素可以通过被提供的函数方法。该方法返回一个Boolean类型的值。对于空数组上的任何条件，此方法返回false。</p>
-<p>includes()  用来判断一个数组是否包含一个指定的值，根据情况，如果包含则返回 true，否则返回false。对象数组不能使用includes方法来检测</p>
-<blockquote>
-<p>建议用来代理对数组的indexOf操作，如果只是判断有无包含的话</p>
-</blockquote>
-<p><strong>具体用法，可以多查阅<code>MDN</code>来熟悉</strong></p>
-<blockquote>
-<p>日常处理业务逻辑很大一部分是对数组的处理，而对数组的处理中，活用这些方法会事半功倍</p>
-</blockquote>
-<h3 id="前端性能优化方案"><a href="#前端性能优化方案" class="headerlink" title="前端性能优化方案"></a>前端性能优化方案</h3><blockquote>
-<p>本质是减少CPU和GPU的计算或者同等条件\实现下减少内存的使用；基于目前硬件的性能过剩以及优越的网络环境，只要不是死循环或者内存泄漏，且多加载个几百K的js库一般是无感知的，所以一般性能的瓶颈不在前端；前端的优化更多是锦上添花而已</p>
-</blockquote>
-<blockquote>
-<p>当然如果项目很庞大了，各种依赖，比如现在流行的SPA应用</p>
-</blockquote>
-<h4 id="优化方向"><a href="#优化方向" class="headerlink" title="优化方向"></a>优化方向</h4><ol>
-<li><p>减少页面体积，提升网络加载 </p>
-<ul>
-<li><p>静态资源的压缩合并（JS 代码压缩合并、CSS 代码压缩合并、雪碧图） </p>
-</li>
-<li><p>静态资源缓存（资源名称加 MD5 戳） </p>
-</li>
-<li><p>使用 CDN 让资源加载更快</p>
-</li>
-</ul>
-</li>
-<li><p>优化页面渲染</p>
-<ul>
-<li><p>CSS 放前面，JS 放后面 </p>
-</li>
-<li><p>懒加载（图片懒加载、下拉加载更多） </p>
-</li>
-<li><p>减少DOM 查询，对 DOM 查询做缓存; 减少DOM 操作，多个操作尽量合并在一起执行（DocumentFragment） </p>
-<blockquote>
-<p>现在主流都用mvvm框架了，基本避免了这个问题，因为很少会用DOM操作了</p>
-</blockquote>
-</li>
-<li><p>事件节流 </p>
-</li>
-<li><p>尽早执行操作 - DOMContentLoaded</p>
-<blockquote>
-<p> jQuery 中经常使用的 <code>$(document).ready(function() { // ...代码... })</code>; 其实监听的就是 DOMContentLoaded 事件，页面被解析后，我们就可以访问整个页面的所有dom元素，可以缩短页面的可交互时间，提高整个页面的体验; 传统的window.onload是需要页面完整加载后才触发，包括js，图片等资源；不过基于目前流行的mvvm框架是有对应的钩子函数去处理的</p>
-</blockquote>
-</li>
-<li><p><del>使用 SSR 后端渲染，数据直接输出到 HTML 中，减少浏览器使用 JS 模板渲染页面 HTML 的时间</del></p>
-<blockquote>
-<p>个人认为SSR目前只是过渡方案</p>
-</blockquote>
-</li>
-</ul>
-</li>
-</ol>
-<p><strong>未完待續，持續更新中</strong></p>
-
-          
+<p>过去一年多时间里，写前端js代码的时候远远多于PHP…</p>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2019/06/27/面试题集-前端篇-从基础到进阶-附带个人讲解点评/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -612,15 +563,15 @@
             <h4 id="svn连接错误报错-由于目标计算机积极拒绝-无法连接"><a href="#svn连接错误报错-由于目标计算机积极拒绝-无法连接" class="headerlink" title="svn连接错误报错: 由于目标计算机积极拒绝, 无法连接"></a>svn连接错误报错: 由于目标计算机积极拒绝, 无法连接</h4><blockquote>
 <p>实际上svn在目前工作中已经用的很少了，基本是以git为主了；svn主要是维护一些旧repo会用到…</p>
 </blockquote>
-<p>执行 <code>ps aux | grep svnserve</code> ; 正常应显示如下:</p>
+<p>执行 <code>ps aux | grep svnserve</code> ; 服务正常的情况下显示如下:</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">root      1285  0.0  0.0  66764   840 ?        Ss   Feb21   0:00 svnserve -d -r /var/opt/svn/ --listen-port 11810</span><br><span class="line">root     17588  0.0  0.0  11740   940 pts/0    S+   15:29   0:00 grep --color=auto svnserve</span><br></pre></td></tr></table></figure>
-<p>实际显示:</p>
+<p>此次异常的服务器显示如下:</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">root     18056  0.0  0.0  14228   864 pts/0    S+   15:29   0:00 grep --color=auto svnserve</span><br></pre></td></tr></table></figure>
-<p>相关端口并没有被使用\监听, SVN服务未开启…</p>
-<p>执行 <code>svnserve -d -r /var/opt/svn</code> 重启服务, 再执行<code>ps aux | grep svnserve</code> ; <code>/var/opt/svn</code> 为svn安装路径, 可以先执行 <code>find / -name svn</code> 查看得到</p>
+<p>发现相关端口并没有被使用\监听, svn服务未开启…</p>
+<p>执行 <code>svnserve -d -r /var/opt/svn</code> 重启服务, 再执行<code>ps aux | grep svnserve</code> ; <code>/var/opt/svn</code> 为svn安装路径, 这里可以先执行 <code>find / -name svn</code> 查看得到svn安装路径</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">root     18067  0.0  0.0  73488   944 ?        Ss   15:33   0:00 svnserve -d -r /var/opt/svn</span><br><span class="line">root     18071  0.0  0.0  14228   956 pts/0    S+   15:33   0:00 grep --color=auto svnserve</span><br></pre></td></tr></table></figure>
 <blockquote>
-<p>这里的svn使用的是默认端口3690, 所以默认不显示</p>
+<p>这里的svn使用的是默认端口3690, 所以默认不显示<code>--listen-port [port]</code></p>
 </blockquote>
 <p>或执行 <code>netstat -ntlp</code> 查看：</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">tcp        0      0 127.0.0.1:6010          0.0.0.0:*               LISTEN      17990/0         </span><br><span class="line">tcp        0      0 0.0.0.0:443             0.0.0.0:*               LISTEN      888/nginx -g daemon</span><br><span class="line">tcp        0      0 0.0.0.0:3690            0.0.0.0:*               LISTEN      18067/svnserve  </span><br><span class="line">tcp        0      0 127.0.0.1:3306          0.0.0.0:*               LISTEN      2641/mysqld     </span><br><span class="line">tcp        0      0 127.0.0.1:6379          0.0.0.0:*               LISTEN      12092/redis-server </span><br><span class="line">tcp        0      0 0.0.0.0:80              0.0.0.0:*               LISTEN      888/nginx -g daemon</span><br><span class="line">tcp        0      0 0.0.0.0:22              0.0.0.0:*               LISTEN      756/sshd        </span><br><span class="line">tcp6       0      0 :::80                   :::*                    LISTEN      888/nginx -g daemon</span><br><span class="line">tcp6       0      0 :::21                   :::*                    LISTEN      789/vsftpd</span><br></pre></td></tr></table></figure>
@@ -745,21 +696,27 @@
         
           
             <h3 id="通常始于二次开发"><a href="#通常始于二次开发" class="headerlink" title="通常始于二次开发"></a>通常始于二次开发</h3><p>基于各种开源cms系统的各种二次开发，而且是很早期的版本，大搞率是已经停止维护的后台管理系统，技术栈各种老旧。</p>
-<p>PHP端通常是与前端(这个时候只能称为模板)强耦合，页面由服务端(PHP)渲染，而非前端异步请求渲染，更不用说前后端分离、SSR等等…</p>
+<p>PHP端通常是与前端强耦合(这个时候只能称为模板)，页面由服务端(PHP)渲染，而非前端异步请求渲染，更不用说前后端分离、SSR等等…</p>
 <p>前端的技术栈通常的早期版本jQuery，然后是上古时代的基于jQuery的UI框架，比如easyUI。</p>
-<p>PHP绝对是5.6以下的，框架里连命名空间都不用，没有统一使用composer的自动加载，没有遵循PSR规范等等</p>
+<p>PHP版本绝对 &lt;= 5.6，项目框架里连命名空间都不用，没有统一使用composer的自动加载，没有遵循PSR规范等等</p>
+<blockquote>
+<p>这里不是说基于开源软件的二开不好(不过，任何有追求的程序员都不会喜欢二开)，事实上，选择开源软件二开，很多时候是初创公司的必然；但是要做好评估和选择，尽可能减少所谓<code>技术债</code></p>
+</blockquote>
 <p>……</p>
-<h3 id="真正的「一把梭」"><a href="#真正的「一把梭」" class="headerlink" title="真正的「一把梭」"></a>真正的「一把梭」</h3><p>这种的程序员，不管初心如何，写的代码基本是各种复制粘贴，在既有框架架构下。</p>
+<h3 id="真正的「一把梭」"><a href="#真正的「一把梭」" class="headerlink" title="真正的「一把梭」"></a>真正的「一把梭」</h3><p>这类程序员，不管初心如何，写的代码基本是各种复制粘贴，在既有框架架构下。</p>
 <p>他们无力重构，无力脱离\改变既有架构，当然也可能不敢，因为没有能力给出具体解决方案去说服老板；所以最大的可能就是能力问题，否则是可以做到渐进式的迭代。</p>
 <p>这种程序员其实是最大限度的得益于PHP的简单、灵活，无需关注太多编程的基础，一个Array就可以处理基本所有业务，大可不必关注\引入其他数据结构。当然，这是PHP的优点。</p>
-<p>基于各种复制粘贴，那必然是没有任何架构、任何设计模式可言；这种代码我是见过的：全局变量满天飞，各种逻辑重复，没什么抽象封装，随处可见的面条式代码，foreach循环里执行sql的插入语句……</p>
+<p>既然是基于各种复制粘贴，那必然是没有任何架构、任何设计模式可言；这种代码我是见过的：全局变量满天飞，各种逻辑重复，没什么抽象封装，随处可见的面条式代码，甚至foreach循环里执行sql的插入语句……</p>
 <p>什么PSR规范、SPL、Composer、Laravel、Swoole…<br>什么异步非阻塞、协程、多线程(虽然PHP的多线程比较鸡肋)、并发、锁、缓存、消息队列…<br>这些PHP世界以及编程世界里比较先进\基础的概念\工具，通常是没听过或者没用过。</p>
-<p>然后呢，开发一段时间后，他们便无力开发所谓的新「模块」了，只能把精力放在「维护」上了，尽管到那个时候只是「维护」都已经很费劲了。</p>
+<p>很快，开发一段时间后，他们便无力开发所谓的新「模块」了，只能把精力放在「维护」上了，尽管到那个时候只是「维护」都已经很费劲了。</p>
 <h3 id="会一些「让老板觉得很赚」的附加技能"><a href="#会一些「让老板觉得很赚」的附加技能" class="headerlink" title="会一些「让老板觉得很赚」的附加技能"></a>会一些「让老板觉得很赚」的附加技能</h3><p>这类程序员通常会一些基础的Linux，让老板「节省」了运维的工作。</p>
-<p>当然持续集成，持续部署是没有的，devOps是不同次元的东西，k8s? Docker? sorry，小公司用不上。</p>
+<p>当然持续集成，持续部署是没有的，devOps是不同次元的东西，k8s? Docker? 小公司确实也用不上。</p>
 <p>通常是只用svn的，用git的话也是当svn用，直接在master分支开发，还会嫌git不如svn，因为还得到线上再pull一下(没有持续集成)…</p>
-<p>服务器的安全、数据库的安全是没有纳入考虑的，虽然也不需要，小公司的项目\业务一般是还没上线或者没什么人用，没有人会关心到这块。</p>
-<h3 id="解决方案"><a href="#解决方案" class="headerlink" title="解决方案"></a>解决方案</h3><p>打破边界，打开眼界 -&gt; 提高对自身的要求，不断积累、总结实际经验\理论知识，花更多时间去review自己的代码 -&gt; 尽快辞职，加入专业的团队或者改变现状(通常更难)</p>
+<p>服务器的安全、数据库的安全是没有纳入考虑的，虽然也不需要，因为小公司的项目\业务一般是还没上线或者没什么人用，没有人会关心到这块。</p>
+<h3 id="解决方案"><a href="#解决方案" class="headerlink" title="解决方案"></a>解决方案</h3><p>打破边界，打开眼界 -&gt; 提高对自身的要求，不断积累、总结实际经验\理论知识，花更多时间去review自己的代码 -&gt; 尽快辞职，加入专业的团队或者改变现状(从改变自己开始)</p>
+<blockquote>
+<p>很幸运的是，我没有成为这类phper；即使在踏入编程行业初期，我就比较广泛涉猎吸收各种相关概念\知识，同时注重基础以及深度，所谓<code>编程的大局观</code>又或者是<code>码农</code>到<code>工程师</code>的内在门槛的跨越</p>
+</blockquote>
 
           
         
@@ -880,7 +837,8 @@
         
           
             <h3 id="Hello-world"><a href="#Hello-world" class="headerlink" title="Hello world"></a>Hello world</h3><p>个人域名买了很久了，一直荒废着。</p>
-<p>某天，想到可以用下GitHub的服务。于是，使用Hexo简单搭了个Blog。</p>
+<p>某天，想到可以利用下GitHub的静态站点服务。于是，使用Hexo简单搭了个Blog。</p>
+<p>上阿里云解析域名到GitHub.io，顺便申请了免费证书以启用HTTPS。</p>
 <p>之后会间断的发一些post，记录一些技术相关的东西以及其他。</p>
 <p>就这样。</p>
 
@@ -964,7 +922,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">4</span>
+                  <span class="site-state-item-count">5</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>

@@ -79,17 +79,17 @@
 
 
 
-<meta name="description" content="svn连接错误报错: 由于目标计算机积极拒绝, 无法连接 实际上svn在目前工作中已经用的很少了，基本是以git为主了；svn主要是维护一些旧repo会用到…  执行 ps aux | grep svnserve ; 正常应显示如下: 12root      1285  0.0  0.0  66764   840 ?        Ss   Feb21   0:00 svnserve -d -r">
+<meta name="description" content="svn连接错误报错: 由于目标计算机积极拒绝, 无法连接 实际上svn在目前工作中已经用的很少了，基本是以git为主了；svn主要是维护一些旧repo会用到…  执行 ps aux | grep svnserve ; 服务正常的情况下显示如下: 12root      1285  0.0  0.0  66764   840 ?        Ss   Feb21   0:00 svnserve -">
 <meta property="og:type" content="article">
 <meta property="og:title" content="记一次svn连接错误">
 <meta property="og:url" content="https://hafung.top/2019/05/20/记一次svn连接错误/index.html">
 <meta property="og:site_name" content="HaFung&#39;s Blog">
-<meta property="og:description" content="svn连接错误报错: 由于目标计算机积极拒绝, 无法连接 实际上svn在目前工作中已经用的很少了，基本是以git为主了；svn主要是维护一些旧repo会用到…  执行 ps aux | grep svnserve ; 正常应显示如下: 12root      1285  0.0  0.0  66764   840 ?        Ss   Feb21   0:00 svnserve -d -r">
+<meta property="og:description" content="svn连接错误报错: 由于目标计算机积极拒绝, 无法连接 实际上svn在目前工作中已经用的很少了，基本是以git为主了；svn主要是维护一些旧repo会用到…  执行 ps aux | grep svnserve ; 服务正常的情况下显示如下: 12root      1285  0.0  0.0  66764   840 ?        Ss   Feb21   0:00 svnserve -">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-06-21T03:35:48.555Z">
+<meta property="og:updated_time" content="2019-07-02T03:55:59.501Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="记一次svn连接错误">
-<meta name="twitter:description" content="svn连接错误报错: 由于目标计算机积极拒绝, 无法连接 实际上svn在目前工作中已经用的很少了，基本是以git为主了；svn主要是维护一些旧repo会用到…  执行 ps aux | grep svnserve ; 正常应显示如下: 12root      1285  0.0  0.0  66764   840 ?        Ss   Feb21   0:00 svnserve -d -r">
+<meta name="twitter:description" content="svn连接错误报错: 由于目标计算机积极拒绝, 无法连接 实际上svn在目前工作中已经用的很少了，基本是以git为主了；svn主要是维护一些旧repo会用到…  执行 ps aux | grep svnserve ; 服务正常的情况下显示如下: 12root      1285  0.0  0.0  66764   840 ?        Ss   Feb21   0:00 svnserve -">
 
 
 
@@ -302,15 +302,15 @@
         <h4 id="svn连接错误报错-由于目标计算机积极拒绝-无法连接"><a href="#svn连接错误报错-由于目标计算机积极拒绝-无法连接" class="headerlink" title="svn连接错误报错: 由于目标计算机积极拒绝, 无法连接"></a>svn连接错误报错: 由于目标计算机积极拒绝, 无法连接</h4><blockquote>
 <p>实际上svn在目前工作中已经用的很少了，基本是以git为主了；svn主要是维护一些旧repo会用到…</p>
 </blockquote>
-<p>执行 <code>ps aux | grep svnserve</code> ; 正常应显示如下:</p>
+<p>执行 <code>ps aux | grep svnserve</code> ; 服务正常的情况下显示如下:</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">root      1285  0.0  0.0  66764   840 ?        Ss   Feb21   0:00 svnserve -d -r /var/opt/svn/ --listen-port 11810</span><br><span class="line">root     17588  0.0  0.0  11740   940 pts/0    S+   15:29   0:00 grep --color=auto svnserve</span><br></pre></td></tr></table></figure>
-<p>实际显示:</p>
+<p>此次异常的服务器显示如下:</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">root     18056  0.0  0.0  14228   864 pts/0    S+   15:29   0:00 grep --color=auto svnserve</span><br></pre></td></tr></table></figure>
-<p>相关端口并没有被使用\监听, SVN服务未开启…</p>
-<p>执行 <code>svnserve -d -r /var/opt/svn</code> 重启服务, 再执行<code>ps aux | grep svnserve</code> ; <code>/var/opt/svn</code> 为svn安装路径, 可以先执行 <code>find / -name svn</code> 查看得到</p>
+<p>发现相关端口并没有被使用\监听, svn服务未开启…</p>
+<p>执行 <code>svnserve -d -r /var/opt/svn</code> 重启服务, 再执行<code>ps aux | grep svnserve</code> ; <code>/var/opt/svn</code> 为svn安装路径, 这里可以先执行 <code>find / -name svn</code> 查看得到svn安装路径</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">root     18067  0.0  0.0  73488   944 ?        Ss   15:33   0:00 svnserve -d -r /var/opt/svn</span><br><span class="line">root     18071  0.0  0.0  14228   956 pts/0    S+   15:33   0:00 grep --color=auto svnserve</span><br></pre></td></tr></table></figure>
 <blockquote>
-<p>这里的svn使用的是默认端口3690, 所以默认不显示</p>
+<p>这里的svn使用的是默认端口3690, 所以默认不显示<code>--listen-port [port]</code></p>
 </blockquote>
 <p>或执行 <code>netstat -ntlp</code> 查看：</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">tcp        0      0 127.0.0.1:6010          0.0.0.0:*               LISTEN      17990/0         </span><br><span class="line">tcp        0      0 0.0.0.0:443             0.0.0.0:*               LISTEN      888/nginx -g daemon</span><br><span class="line">tcp        0      0 0.0.0.0:3690            0.0.0.0:*               LISTEN      18067/svnserve  </span><br><span class="line">tcp        0      0 127.0.0.1:3306          0.0.0.0:*               LISTEN      2641/mysqld     </span><br><span class="line">tcp        0      0 127.0.0.1:6379          0.0.0.0:*               LISTEN      12092/redis-server </span><br><span class="line">tcp        0      0 0.0.0.0:80              0.0.0.0:*               LISTEN      888/nginx -g daemon</span><br><span class="line">tcp        0      0 0.0.0.0:22              0.0.0.0:*               LISTEN      756/sshd        </span><br><span class="line">tcp6       0      0 :::80                   :::*                    LISTEN      888/nginx -g daemon</span><br><span class="line">tcp6       0      0 :::21                   :::*                    LISTEN      789/vsftpd</span><br></pre></td></tr></table></figure>
@@ -428,7 +428,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">4</span>
+                  <span class="site-state-item-count">5</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
