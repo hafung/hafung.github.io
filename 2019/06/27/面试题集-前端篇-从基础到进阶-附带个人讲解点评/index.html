@@ -5,7 +5,7 @@
   
 
 
-<html class="theme-next muse use-motion" lang="zh-Hans">
+<html class="theme-next gemini use-motion" lang="zh-Hans">
 <head><meta name="generator" content="Hexo 3.8.0">
   <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -97,7 +97,7 @@
   var NexT = window.NexT || {};
   var CONFIG = {
     root: '/',
-    scheme: 'Muse',
+    scheme: 'Gemini',
     version: '5.1.4',
     sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
     fancybox: true,
@@ -186,6 +186,16 @@
               <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
             
             首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br>
+            
+            关于
           </a>
         </li>
       
@@ -664,7 +674,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#快速理解JavaScript的面向对象"><span class="nav-number">1.</span> <span class="nav-text">快速理解JavaScript的面向对象</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#JavaScript的8种数据类型"><span class="nav-number">2.</span> <span class="nav-text">JavaScript的8种数据类型</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#ajax请求的原理"><span class="nav-number">3.</span> <span class="nav-text">ajax请求的原理</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#关于跨域"><span class="nav-number">4.</span> <span class="nav-text">关于跨域</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#异步-Promise-async-await"><span class="nav-number">5.</span> <span class="nav-text">异步\Promise\async-await</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#算法-js实现"><span class="nav-number">6.</span> <span class="nav-text">算法(js实现)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#移动端适配方案"><span class="nav-number">7.</span> <span class="nav-text">移动端适配方案</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#闭包（Closure）"><span class="nav-number">8.</span> <span class="nav-text">闭包（Closure）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#原型链-原型"><span class="nav-number">9.</span> <span class="nav-text">原型链\原型</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#关于this"><span class="nav-number">10.</span> <span class="nav-text">关于this</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#设计模式"><span class="nav-number">11.</span> <span class="nav-text">设计模式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Array原型上的一些常用方法"><span class="nav-number">12.</span> <span class="nav-text">Array原型上的一些常用方法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#前端性能优化方案"><span class="nav-number">13.</span> <span class="nav-text">前端性能优化方案</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#优化方向"><span class="nav-number">13.1.</span> <span class="nav-text">优化方向</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#快速理解JavaScript的面向对象"><span class="nav-text">快速理解JavaScript的面向对象</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#JavaScript的8种数据类型"><span class="nav-text">JavaScript的8种数据类型</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#ajax请求的原理"><span class="nav-text">ajax请求的原理</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#关于跨域"><span class="nav-text">关于跨域</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#异步-Promise-async-await"><span class="nav-text">异步\Promise\async-await</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#算法-js实现"><span class="nav-text">算法(js实现)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#移动端适配方案"><span class="nav-text">移动端适配方案</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#闭包（Closure）"><span class="nav-text">闭包（Closure）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#原型链-原型"><span class="nav-text">原型链\原型</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#关于this"><span class="nav-text">关于this</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#设计模式"><span class="nav-text">设计模式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Array原型上的一些常用方法"><span class="nav-text">Array原型上的一些常用方法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#前端性能优化方案"><span class="nav-text">前端性能优化方案</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#优化方向"><span class="nav-text">优化方向</span></a></li></ol></li></ol></div>
             
 
           </div>
@@ -702,7 +712,7 @@
 
 
 
-  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Muse</a> v5.1.4</div>
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Gemini</a> v5.1.4</div>
 
 
 
@@ -801,6 +811,13 @@
 
   
   
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
 
   
   <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
