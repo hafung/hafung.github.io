@@ -79,17 +79,17 @@
 
 
 
-<meta name="description" content="以下引用部分为个人的注解，其余为个人的归纳和总结  PHPPHP面向对象的一些概述">
+<meta name="description" content="以下引用部分为个人的注解，其余为个人的归纳和总结  服务端编程(web\PHP为主)PHP面向对象的一些概述">
 <meta property="og:type" content="article">
 <meta property="og:title" content="面试散记-后端篇-从基础到进阶-附带个人讲解点评">
 <meta property="og:url" content="https://hafung.top/2019/07/03/面试散记-后端篇-从基础到进阶-附带个人讲解点评/index.html">
 <meta property="og:site_name" content="HaFung&#39;s Blog">
-<meta property="og:description" content="以下引用部分为个人的注解，其余为个人的归纳和总结  PHPPHP面向对象的一些概述">
+<meta property="og:description" content="以下引用部分为个人的注解，其余为个人的归纳和总结  服务端编程(web\PHP为主)PHP面向对象的一些概述">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-07-03T07:16:43.626Z">
+<meta property="og:updated_time" content="2020-02-03T03:53:39.095Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="面试散记-后端篇-从基础到进阶-附带个人讲解点评">
-<meta name="twitter:description" content="以下引用部分为个人的注解，其余为个人的归纳和总结  PHPPHP面向对象的一些概述">
+<meta name="twitter:description" content="以下引用部分为个人的注解，其余为个人的归纳和总结  服务端编程(web\PHP为主)PHP面向对象的一些概述">
 
 
 
@@ -312,13 +312,13 @@
         <blockquote>
 <p><em>以下引用部分为个人的注解，其余为个人的归纳和总结</em></p>
 </blockquote>
-<h2 id="PHP"><a href="#PHP" class="headerlink" title="PHP"></a>PHP</h2><h3 id="PHP面向对象的一些概述"><a href="#PHP面向对象的一些概述" class="headerlink" title="PHP面向对象的一些概述"></a>PHP面向对象的一些概述</h3><a id="more"></a>
+<h2 id="服务端编程-web-PHP为主"><a href="#服务端编程-web-PHP为主" class="headerlink" title="服务端编程(web\PHP为主)"></a>服务端编程(web\PHP为主)</h2><h3 id="PHP面向对象的一些概述"><a href="#PHP面向对象的一些概述" class="headerlink" title="PHP面向对象的一些概述"></a>PHP面向对象的一些概述</h3><a id="more"></a>
 <p>static 静态方法：是类的成员方法, 但不需要实例化类可直接使用；静态变量：在局部函数中存在且只初始化一次,使用过后再次使用会使用上次执行的结果; 作为计数，程序内部缓存，单例模式中都有用到。</p>
-<h3 id="Memcache与Redis"><a href="#Memcache与Redis" class="headerlink" title="Memcache与Redis"></a>Memcache与Redis</h3><p>Redis支持丰富的数据结构类型，字符串，散列（哈希），集合，有序集合，还支持订阅发布，地理位置等等，Memcache只支持字符串；<br>Redis 提供了多种不同级别的持久化方式；Memcache不支持</p>
+<h3 id="Memcache-与-Redis"><a href="#Memcache-与-Redis" class="headerlink" title="Memcache 与 Redis"></a>Memcache 与 Redis</h3><p>Redis支持丰富的数据结构类型，字符串，散列(哈希)，集合，有序集合，还支持订阅发布，地理位置等等，Memcache只支持字符串；<br>Redis 提供了多种不同级别的持久化方式；Memcache不支持</p>
 <blockquote>
 <p>目前缓存中间件一般都是用Redis了，虽然Memcache的性能比Redis好，但Redis应用场景更丰富</p>
 </blockquote>
-<h3 id="什么是CGI？什么是-FastCGI？php-fpm，FastCGI，Nginx-之间是什么关系"><a href="#什么是CGI？什么是-FastCGI？php-fpm，FastCGI，Nginx-之间是什么关系" class="headerlink" title="什么是CGI？什么是 FastCGI？php-fpm，FastCGI，Nginx 之间是什么关系"></a>什么是CGI？什么是 FastCGI？php-fpm，FastCGI，Nginx 之间是什么关系</h3><p>CGI，通用网关接口，用于WEB服务器和应用程序间的交互，定义输入输出规范，用户的请求通过WEB服务器转发给FastCGI进程，FastCGI进程再调用应用程序进行处理，如php解析器，应用程序的处理结果如html返回给FastCGI，FastCGI返回给Nginx 进行输出。假设这里WEB服务器是Nginx，应用程序是 PHP，而 php-fpm 是管理 FastCGI 的，这也就是 php-fpm，FastCGI，和 Nginx 之间的关系。</p>
+<h3 id="什么是CGI-什么是-FastCGI-php-fpm-FastCGI-Nginx-之间是什么关系"><a href="#什么是CGI-什么是-FastCGI-php-fpm-FastCGI-Nginx-之间是什么关系" class="headerlink" title="什么是CGI? 什么是 FastCGI? php-fpm, FastCGI, Nginx 之间是什么关系"></a>什么是CGI? 什么是 FastCGI? php-fpm, FastCGI, Nginx 之间是什么关系</h3><p>CGI，通用网关接口，用于WEB服务器和应用程序间的交互，定义输入输出规范，用户的请求通过WEB服务器转发给FastCGI进程，FastCGI进程再调用应用程序进行处理，如php解析器，应用程序的处理结果如html返回给FastCGI，FastCGI返回给Nginx 进行输出。假设这里WEB服务器是Nginx，应用程序是 PHP，而 php-fpm 是管理 FastCGI 的，这也就是 php-fpm，FastCGI，和 Nginx 之间的关系。</p>
 <p>FastCGI 用来提高 cgi 程序性能，启动一个master，再启动多个 worker，不需要每次解析 php.ini. 而 php-fpm 实现了 FastCGI 协议，是 FastCGI 的进程管理器，支持平滑重启，可以启动的时候预先生成多个进程。</p>
 <blockquote>
 <p>php-fpm是PHP和nginx配合的需要用到的，f 代表 fast-cgi,p 代表 process,m 代表 manager；如果是apache则是其他方式(mod)</p>
@@ -326,37 +326,28 @@
 <blockquote>
 <p>php-fpm 与 ningx 交互: fpm 默认通过监听 9000 端口，当请求到 nginx web 服务器时，nginx 打开相应地址下的 php 文件把源码通过 9000 端口发送到 php-fpm，php-fpm 再把源码通过 php 进程进行解析源码，把结果返回到 ningx 在返回客户端。</p>
 </blockquote>
-<h3 id="排序算法"><a href="#排序算法" class="headerlink" title="排序算法"></a>排序算法</h3><ul>
-<li>快速排序</li>
-</ul>
+<h3 id="排序算法"><a href="#排序算法" class="headerlink" title="排序算法"></a>排序算法</h3><p>快速排序</p>
 <p>快速排序是十分常用的高效率的算法，其思想是：先选一个标尺，用它把整个队列过一遍筛选，以保证其左边的元素都不大于它，其右边的元素都不小与它</p>
-<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">quickSort</span><span class="params">($arr)</span></span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 获取数组长度</span></span><br><span class="line">    $length = count($arr);</span><br><span class="line">    <span class="comment">// 判断长度是否需要继续二分比较</span></span><br><span class="line">    <span class="keyword">if</span>($length &lt;= <span class="number">1</span>)&#123;</span><br><span class="line">        <span class="keyword">return</span> $arr;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">// 定义基准元素</span></span><br><span class="line">    $base = $arr[<span class="number">0</span>];</span><br><span class="line">    <span class="comment">// 定义两个空数组，用于存放和基准元素的比较后的结果</span></span><br><span class="line">    $left = [];</span><br><span class="line">    $right = [];</span><br><span class="line">    <span class="comment">// 遍历数组</span></span><br><span class="line">    <span class="keyword">for</span> ($i=<span class="number">1</span>; $i &lt; $length; $i++) &#123; </span><br><span class="line"></span><br><span class="line">        <span class="comment">// 和基准元素作比较</span></span><br><span class="line">        <span class="keyword">if</span> ($arr[$i] &gt; $base) &#123;</span><br><span class="line">            $right[] = $arr[$i];</span><br><span class="line">        &#125;<span class="keyword">else</span> &#123;</span><br><span class="line">            $left[] = $arr[$i];</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">// 然后递归分别处理left和right</span></span><br><span class="line">    $left = quickSort($left);</span><br><span class="line">    $right = quickSort($right);</span><br><span class="line">    <span class="comment">// 合并</span></span><br><span class="line">    <span class="keyword">return</span> array_merge($left,[$base],$right);</span><br><span class="line">  </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<ul>
-<li>冒泡排序</li>
-</ul>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">quickSort</span><span class="params">($arr)</span></span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 获取数组长度</span></span><br><span class="line">    $length = count($arr);</span><br><span class="line">    <span class="comment">// 判断长度是否需要继续二分比较</span></span><br><span class="line">    <span class="keyword">if</span> ($length &lt;= <span class="number">1</span>) &#123;</span><br><span class="line">        <span class="keyword">return</span> $arr;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">// 定义基准元素</span></span><br><span class="line">    $base = $arr[<span class="number">0</span>];</span><br><span class="line">    <span class="comment">// 定义两个空数组，用于存放和基准元素的比较后的结果</span></span><br><span class="line">    $left = [];</span><br><span class="line">    $right = [];</span><br><span class="line">    <span class="comment">// 遍历数组</span></span><br><span class="line">    <span class="keyword">for</span> ($i=<span class="number">1</span>; $i &lt; $length; $i++) &#123; </span><br><span class="line"></span><br><span class="line">        <span class="comment">// 和基准元素作比较</span></span><br><span class="line">        <span class="keyword">if</span> ($arr[$i] &gt; $base) &#123;</span><br><span class="line">            $right[] = $arr[$i];</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            $left[] = $arr[$i];</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">// 然后递归分别处理left和right</span></span><br><span class="line">    $left = quickSort($left);</span><br><span class="line">    $right = quickSort($right);</span><br><span class="line">    <span class="comment">// 合并</span></span><br><span class="line">    <span class="keyword">return</span> array_merge($left,[$base],$right);</span><br><span class="line">  </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><strong>冒泡排序</strong></p>
 <p>思路：法如其名，就像冒泡一样，每次从数组中冒出一个最大的数<br>比如：2，4，1<br>第一次冒出4：2，1，4<br>第二次冒出2：1，2，4</p>
 <figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">bubbleSort</span><span class="params">($arr)</span></span>&#123;</span><br><span class="line">  <span class="comment">// 获取数组长度</span></span><br><span class="line">  $length = count($arr);</span><br><span class="line">    <span class="comment">// 第一层循环控制冒泡轮次</span></span><br><span class="line">    <span class="keyword">for</span> ($i=<span class="number">0</span>; $i &lt; $length<span class="number">-1</span>; $i++) &#123; </span><br><span class="line">        <span class="comment">// 内层循环控制从第0个键值和后一个键值比较，每次冒出一个最大的数</span></span><br><span class="line">        <span class="keyword">for</span> ($k=<span class="number">0</span>; $k &lt; $length-$i; $k++) &#123; </span><br><span class="line">            <span class="keyword">if</span>($arr[$k] &gt; $arr[$k+<span class="number">1</span>])&#123;</span><br><span class="line">                $tmp = $arr[$k+<span class="number">1</span>];</span><br><span class="line">                $arr[$k+<span class="number">1</span>] = $arr[$k];</span><br><span class="line">                $arr[$k] = $tmp;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> $arr;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<ul>
-<li>选择排序 </li>
-</ul>
+<p>选择排序 </p>
 <p>思路：每次选择一个相应的元素，然后将其放到指定的位置</p>
 <figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">selectSort</span><span class="params">($arr)</span></span>&#123;</span><br><span class="line">    <span class="comment">// 实现思路: 双重循环完成，外层控制轮数，当前的最小值，内层控制比较次数</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">// 获取长度</span></span><br><span class="line">    $length = count($arr);</span><br><span class="line">    <span class="keyword">for</span> ($i=<span class="number">0</span>; $i &lt; $length - <span class="number">1</span>; $i++) &#123;</span><br><span class="line">        <span class="comment">// 假设最小值的位置</span></span><br><span class="line">        $p = $i;</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 使用假设的最小值和其他值比较，找到当前的最小值</span></span><br><span class="line">        <span class="keyword">for</span> ($j=$i+<span class="number">1</span>; $j &lt; $length; $j++) &#123; </span><br><span class="line">            <span class="comment">// $arr[$p] 是已知的当前最小值</span></span><br><span class="line"></span><br><span class="line">            <span class="comment">// 判断当前循环值和已知最小值的比较，当发下更小的值时记录下键，并进行下一次比较</span></span><br><span class="line">            <span class="keyword">if</span> ($arr[$p] &gt; $arr[$j]) &#123;</span><br><span class="line">            $p = $j; <span class="comment">// 比假设的值更小</span></span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 通过内部for循环找到了当前最小值的key,并保存在$p中</span></span><br><span class="line">        <span class="comment">// 判断 日光当前$p 中的键和假设的最小值的键不一致增将其互换</span></span><br><span class="line">        <span class="keyword">if</span> ($p != $i) &#123;</span><br><span class="line">            $tmp = $arr[$p];</span><br><span class="line">            $arr[$p] = $arr[$i];</span><br><span class="line">            $arr[$i] = $tmp;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">// 返回最终结果</span></span><br><span class="line">    <span class="keyword">return</span> $arr;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<ul>
-<li>插入排序</li>
-</ul>
+<p>插入排序</p>
 <p>思路分析：在要排序的一组数中，假设前面的数已经是排好顺序的，现在要把第n个数插到前面的有序数中，使得这n个数也是排好顺序的。如此反复循环，直到全部排好顺序。</p>
 <figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">insertSort</span><span class="params">($arr)</span> </span>&#123;</span><br><span class="line">    $len=count($arr); </span><br><span class="line">    <span class="keyword">for</span>($i=<span class="number">1</span>, $i&lt;$len; $i++) &#123;</span><br><span class="line">        $tmp = $arr[$i];</span><br><span class="line">        <span class="comment">//内层循环控制，比较并插入</span></span><br><span class="line">        <span class="keyword">for</span>($j=$i<span class="number">-1</span>;$j&gt;=<span class="number">0</span>;$j--) &#123;</span><br><span class="line">            <span class="keyword">if</span>($tmp &lt; $arr[$j]) &#123;</span><br><span class="line">                <span class="comment">//发现插入的元素要小，交换位置，将后边的元素与前面的元素互换</span></span><br><span class="line">                $arr[$j+<span class="number">1</span>] = $arr[$j];</span><br><span class="line">                $arr[$j] = $tmp;</span><br><span class="line">            &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                <span class="comment">//如果碰到不需要移动的元素，由于是已经排序好是数组，则前面的就不需要再次比较了。</span></span><br><span class="line">                <span class="keyword">break</span>;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> $arr;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <blockquote>
 <p>注意了，这里只是用PHP语言去实现\理解这些常见的排序算法，实际业务中用这个是没有优势的，实际业务更多是用内置的<code>sort</code>或其他内置函数的排序</p>
 </blockquote>
-<h3 id="TCP-UDP区别"><a href="#TCP-UDP区别" class="headerlink" title="TCP/UDP区别"></a>TCP/UDP区别</h3><ul>
-<li>TCP </li>
-</ul>
+<h3 id="TCP-UDP区别"><a href="#TCP-UDP区别" class="headerlink" title="TCP/UDP区别"></a>TCP/UDP区别</h3><p><strong>TCP</strong></p>
 <p>TCP是一种面向连接的、可靠的、基于字节流的传输层通信协议<br>TCP面向连接，提供可靠地数据服务<br>TCP首部开销20字节<br>TCP逻辑通信信道是全双工的可靠信道<br>TCP连接只能是点到点的</p>
-<ul>
-<li>UDP</li>
-</ul>
+<p>UDP</p>
 <p>UDP是参考模型中一种无连接的传输层协议，提供面向事务的简单不可靠的信息传递服务<br>UDP无连接，不可靠<br>UDP首部开销8字节<br>UDP逻辑通信信道是不可靠信道<br>UDP没有拥塞机制，因此网络出现拥堵不会使源主机的发送效率降低<br>UDP支持一对一，多对一，多对多的交互通信</p>
+<blockquote>
+<p>HTTP、WebSocket 等应用层协议，都是基于 TCP 协议(传输层)来传输数据的; 都要遵循 TCP 协议中的三次握手和四次挥手 ，只是在连接之后发送的内容不同，或者是断开的时间不同; 对于 WebSocket 来说，它必须依赖 HTTP 协议进行一次握手 ，握手成功后，数据就直接从 TCP 通道传输，与 HTTP 无关了。</p>
+</blockquote>
 <h3 id="三次握手，四次挥手，为什么是三次握手四次挥手"><a href="#三次握手，四次挥手，为什么是三次握手四次挥手" class="headerlink" title="三次握手，四次挥手，为什么是三次握手四次挥手"></a>三次握手，四次挥手，为什么是三次握手四次挥手</h3><ul>
 <li>TCP三次握手</li>
 </ul>
@@ -370,11 +361,12 @@
 <li>为什么是三次握手四次挥手</li>
 </ul>
 <p>这是因为服务端的LISTEN状态下的socket当收到SKY报文的简历连接的请求后，它可以把ACK和SYN放在一个报文里来发送。但关闭连接时，当收到对方的FIN报文通知时，他仅仅表示对方没有数据发送给你了，但未必你的所有数据都全部发送给对方了，所以你可以不是马上回关闭socket，即你可能还会发送一些数据给对方之后，在发送FIN报文给对方来表示你同意现在可以关闭连接了，所以这里的ACK和FIN报文多情况下都是分开发送的。</p>
-<h3 id="设计模式之观察者模式-发布订阅"><a href="#设计模式之观察者模式-发布订阅" class="headerlink" title="设计模式之观察者模式(发布订阅)"></a>设计模式之观察者模式(发布订阅)</h3><p>观察者模式又被称作发布 / 订阅模式，定义了对象间一对多依赖，当一个对象改变状态时，它的所有依赖者都会收到通知并自动更新。</p>
+<h3 id="设计模式之发布订阅"><a href="#设计模式之发布订阅" class="headerlink" title="设计模式之发布订阅"></a>设计模式之发布订阅</h3><p>定义了对象间一对多依赖，当一个对象改变状态时，它的所有依赖者都会收到通知并自动更新。</p>
 <p>应用场景如下：<br>a、对一个对象状态的更新，需要其他对象同步更新，而且其他对象的数量动态可变。<br>b、对象仅需要将自己的更新通知给其他对象而不需要知道其他对象的细节。</p>
-<h3 id="PHP基础"><a href="#PHP基础" class="headerlink" title="PHP基础"></a>PHP基础</h3><ul>
-<li>Session 与 cookie 的区别</li>
-</ul>
+<blockquote>
+<p>常见的web中间件-消息队列, 实际也是发布订阅模式</p>
+</blockquote>
+<h3 id="PHP基础"><a href="#PHP基础" class="headerlink" title="PHP基础"></a>PHP基础</h3><p><strong>Session 与 cookie</strong></p>
 <ol>
 <li>cookie 数据存放在客户的浏览器上，session 数据放在服务器上，以文件的形式存放，可以从 php.ini 里面的 session.save_path 找到存放位置</li>
 <li>cookie 不是很安全 ，cookie 可以进行 cookie 欺骗，别人可以获取 cookie 中的 session id 考虑到安全应当使用 session。</li>
@@ -383,33 +375,24 @@
 <li>单个 cookie 保存的数据不能超过 4K，很多浏览器都限制一个站点最多保存 20 个 cookie。</li>
 <li>一般建议：将登陆信息等重要信息存放为 SESSION 其他信息如果需要保留，可以放在 COOKIE 中</li>
 </ol>
-<ul>
-<li><p>PHP数据类型</p>
-<ul>
-<li>4 种标量 int 整型 float 浮点型 boolean 布尔型 string 字符串型</li>
-<li>2 种复合 object 对象 array 数组</li>
-<li>2 种资源 null 空 resource 资源</li>
-</ul>
-</li>
-</ul>
-<ul>
-<li>$_SERVER [“REMOTE_ADDR”] 和 $_SERVER [“HTTP_X_FORWARED_FOR”] 的作用和区别</li>
-</ul>
-<p>都可以获取 IP；<br>在 PHP 中使用 $_SERVER[“REMOTE_ADDR”] 来取得客户端的 IP 地址，但如果客户端是使用代理服务器来访问，那取到的就是代理服务器的 IP 地址，而不是真正的客户端 IP 地址。<br>要想透过代理服务器取得客户端的真实 IP 地址，就要使用 $_SERVER[“HTTP_X_FORWARDED_FOR”] 来读取。</p>
-<ul>
-<li>个人常用的PHP函数</li>
-</ul>
-<p>数组：<br><figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">in_array()   <span class="comment">// 检查数组中是否存在某个值</span></span><br><span class="line">array_column()  <span class="comment">// 返回数组中指定的一列</span></span><br><span class="line">array_key_exists()  <span class="comment">// 检查给定的键名或索引是否存在于数组中</span></span><br><span class="line">array_merge()  <span class="comment">//合并一个或多个数组</span></span><br><span class="line">array_sum()   <span class="comment">// 计算数组中所有值的和 </span></span><br><span class="line">array_shift()  <span class="comment">// 将数组开头的单元移出数组</span></span><br><span class="line">array_unique()  <span class="comment">// 移除数组中重复的值 </span></span><br><span class="line">array_chunk()  <span class="comment">// 将一个数组分割成多个</span></span><br><span class="line">array_slice()  <span class="comment">// 从数组中取出一段</span></span><br><span class="line">array_keys()  <span class="comment">// 返回数组中部分的或所有的键名</span></span><br><span class="line">array_flip()  <span class="comment">// 交换数组中的键和值</span></span><br><span class="line">array_count_values() — 统计数组中所有的值出现的次数</span><br></pre></td></tr></table></figure></p>
+<p>PHP数据类型</p>
+<pre><code>- 4 种标量 int 整型 float 浮点型 boolean 布尔型 string 字符串型
+- 2 种复合 object 对象 array 数组
+- 2 种资源 null 空 resource 资源
+</code></pre><p>$_SERVER [“REMOTE_ADDR”] 和 $_SERVER [“HTTP_X_FORWARED_FOR”] 的作用和异同</p>
+<p>都可以获取 IP;<br>在 PHP 中使用 $_SERVER[“REMOTE_ADDR”] 来取得客户端的 IP 地址，但如果客户端是使用代理服务器来访问，那取到的就是代理服务器的 IP 地址，而不是真正的客户端 IP 地址;<br>要想透过代理服务器取得客户端的真实 IP 地址，就要使用 $_SERVER[“HTTP_X_FORWARDED_FOR”] 来读取。</p>
+<p><strong>常用的PHP函数</strong></p>
+<p>数组</p>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">in_array()   <span class="comment">// 检查数组中是否存在某个值</span></span><br><span class="line">array_column()  <span class="comment">// 返回数组中指定的一列</span></span><br><span class="line">array_key_exists()  <span class="comment">// 检查给定的键名或索引是否存在于数组中</span></span><br><span class="line">array_merge()  <span class="comment">//合并一个或多个数组</span></span><br><span class="line">array_sum()   <span class="comment">// 计算数组中所有值的和 </span></span><br><span class="line">array_shift()  <span class="comment">// 将数组开头的单元移出数组</span></span><br><span class="line">array_unique()  <span class="comment">// 移除数组中重复的值 </span></span><br><span class="line">array_chunk()  <span class="comment">// 将一个数组分割成多个</span></span><br><span class="line">array_slice()  <span class="comment">// 从数组中取出一段</span></span><br><span class="line">array_keys()  <span class="comment">// 返回数组中部分的或所有的键名</span></span><br><span class="line">array_flip()  <span class="comment">// 交换数组中的键和值</span></span><br><span class="line">array_count_values() — 统计数组中所有的值出现的次数</span><br></pre></td></tr></table></figure>
 <blockquote>
-<p>具体用法请查阅手册，PHP由于历史遗留问题，很多函数的命名或者传参无规律可循，甚至有人说PHP是离开了手册就无法进行开发的语言…当然也确实没必要强记，工具而已，技术含量不高</p>
+<p>具体用法请查阅手册, PHP由于历史遗留问题, 很多函数的命名或者传参无规律可循, 甚至有人说PHP是离开了手册就无法进行开发的语言…当然也确实没必要强记, 工具而已, 技术含量不高</p>
 </blockquote>
-<p>字符串：</p>
+<p>字符串</p>
 <figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">strlen()  <span class="comment">// 获取字符串长度，字节长度</span></span><br><span class="line">explode()  <span class="comment">// 使用一个字符串分割另一个字符串; 返回数组</span></span><br><span class="line">implode()  <span class="comment">// 将一个一维数组的值转化为字符串</span></span><br><span class="line">strpos() <span class="comment">// 查找字符串首次出现的位置，注意区别false 和 0的差异...</span></span><br><span class="line">substr()  <span class="comment">//字符串截取，获取字符串</span></span><br><span class="line">substr_count()  <span class="comment">// 某字符串出现的次数</span></span><br><span class="line">str_split()  <span class="comment">//函数把字符串分割到数组中</span></span><br><span class="line">trim() <span class="comment">//去掉函数两边的字符，默认是空格</span></span><br><span class="line">ucfirst()  <span class="comment">//首字母大写</span></span><br></pre></td></tr></table></figure>
-<ul>
-<li>用 PHP 打印出前一天的时间格式是 20xx-xx-xx xx:xx:xx</li>
-</ul>
-<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">echo</span> date (<span class="string">'Y-m-d H:i:s'</span>,strtotime (<span class="string">'-1 month'</span>,time ())); <span class="comment">// 打印出前一个月</span></span><br><span class="line"><span class="keyword">echo</span> date (<span class="string">'Y-m-d H:i:s'</span>, strtotime (<span class="string">'-1day'</span>));  <span class="comment">// 前一天</span></span><br><span class="line"><span class="keyword">echo</span> date (<span class="string">'Y-m-d H:i:s'</span>, strtotime (<span class="string">'-1week'</span>)); <span class="comment">// 前一周</span></span><br><span class="line"><span class="keyword">echo</span> date (<span class="string">'Y-m-d H:i:s'</span>); <span class="comment">// 现在时间</span></span><br><span class="line"><span class="keyword">echo</span> date (<span class="string">'Y-m-d H:i:s'</span>, strtotime (<span class="string">'next Monday'</span>)); <span class="comment">// 下一个星期一</span></span><br><span class="line"><span class="keyword">echo</span> date (<span class="string">'Y-m-d H:i:s'</span>, strtotime (<span class="string">'last Monday'</span>)); <span class="comment">// 上一个星期一</span></span><br></pre></td></tr></table></figure>
+<p>时间</p>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">echo</span> date (<span class="string">'Y-m-d H:i:s'</span>,strtotime (<span class="string">'-1 month'</span>,time ())); <span class="comment">// 打印出前一个月</span></span><br><span class="line"><span class="keyword">echo</span> date (<span class="string">'Y-m-d H:i:s'</span>, strtotime (<span class="string">'-1day'</span>));  <span class="comment">// 前一天 时间格式是 20xx-xx-xx xx:xx:xx</span></span><br><span class="line"><span class="keyword">echo</span> date (<span class="string">'Y-m-d H:i:s'</span>, strtotime (<span class="string">'-1week'</span>)); <span class="comment">// 前一周</span></span><br><span class="line"><span class="keyword">echo</span> date (<span class="string">'Y-m-d H:i:s'</span>); <span class="comment">// 现在时间</span></span><br><span class="line"><span class="keyword">echo</span> date (<span class="string">'Y-m-d H:i:s'</span>, strtotime (<span class="string">'next Monday'</span>)); <span class="comment">// 下一个星期一</span></span><br><span class="line"><span class="keyword">echo</span> date (<span class="string">'Y-m-d H:i:s'</span>, strtotime (<span class="string">'last Monday'</span>)); <span class="comment">// 上一个星期一</span></span><br></pre></td></tr></table></figure>
 <h3 id="如何确保多个进程同时写一个文件成功-手写个文件锁"><a href="#如何确保多个进程同时写一个文件成功-手写个文件锁" class="headerlink" title="如何确保多个进程同时写一个文件成功(手写个文件锁)"></a>如何确保多个进程同时写一个文件成功(手写个文件锁)</h3><figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">write_file</span><span class="params">($filename, $content)</span> </span>&#123;</span><br><span class="line">    $lock = $filename . <span class="string">'.lck'</span>;</span><br><span class="line">    $write_length = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">while</span>(<span class="keyword">true</span>) &#123;</span><br><span class="line">        <span class="keyword">if</span>( file_exists($lock) ) &#123;</span><br><span class="line">            usleep(<span class="number">100</span>);</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            touch($lock);</span><br><span class="line">            $write_length = file_put_contents($filename, $content, FILE_APPEND);</span><br><span class="line">            <span class="keyword">break</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span>( file_exists($lock) ) &#123;</span><br><span class="line">        unlink($lock);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> $write_length;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="PHP实现异步的几种方式"><a href="#PHP实现异步的几种方式" class="headerlink" title="PHP实现异步的几种方式"></a>PHP实现异步的几种方式</h3><p>待续</p>
 <h3 id="无限分类的实现原理（常用方法）"><a href="#无限分类的实现原理（常用方法）" class="headerlink" title="无限分类的实现原理（常用方法）"></a>无限分类的实现原理（常用方法）</h3><p>略</p>
 <h2 id="MySQL"><a href="#MySQL" class="headerlink" title="MySQL"></a>MySQL</h2><h3 id="MySQL中myisam与innodb的区别"><a href="#MySQL中myisam与innodb的区别" class="headerlink" title="MySQL中myisam与innodb的区别"></a>MySQL中myisam与innodb的区别</h3><ol>
 <li>InnoDB支持事物，而MyISAM不支持事物</li>
@@ -418,16 +401,62 @@
 <li>InnoDB支持外键，而MyISAM不支持</li>
 <li>InnoDB不支持全文索引，而MyISAM支持。</li>
 </ol>
-<h3 id="聚合函数"><a href="#聚合函数" class="headerlink" title="聚合函数"></a>聚合函数</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">聚合函数 count()，求数据表的行数</span><br><span class="line">聚合函数 max()，求某列的最大数值</span><br><span class="line">聚合函数 min(), 求某列的最小值</span><br><span class="line">聚合函数 sum(), 对数据表的某列进行求和操作</span><br><span class="line">聚合函数 avg()，对数据，表的某列进行求平均值操作</span><br></pre></td></tr></table></figure>
+<h3 id="事务的基本要素-ACID-Atomicity-Consistency-Isolation-Durability"><a href="#事务的基本要素-ACID-Atomicity-Consistency-Isolation-Durability" class="headerlink" title="事务的基本要素(ACID) Atomicity Consistency Isolation Durability"></a>事务的基本要素(ACID) Atomicity Consistency Isolation Durability</h3><h3 id="事务的并发问题"><a href="#事务的并发问题" class="headerlink" title="事务的并发问题"></a>事务的并发问题</h3><ol>
+<li><p>脏读：事务A读取了事务B更新的数据，然后B回滚操作，那么A读取到的数据是脏数据</p>
+</li>
+<li><p>不可重复读：事务 A 多次读取同一数据，事务 B 在事务A多次读取的过程中，对数据作了更新并提交，导致事务A多次读取同一数据时，结果 不一致。</p>
+</li>
+<li><p>幻读：系统管理员A将数据库中所有学生的成绩从具体分数改为ABCDE等级，但是系统管理员B就在这个时候插入了一条具体分数的记录，当系统管理员A改结束后发现还有一条记录没有改过来，就好像发生了幻觉一样，这就叫幻读。</p>
+</li>
+</ol>
+<p><em>不可重复读的和幻读很容易混淆，不可重复读侧重于修改，幻读侧重于新增或删除。解决不可重复读的问题只需锁住满足条件的行，解决幻读需要锁表</em></p>
+<h3 id="MySQL事务隔离级别"><a href="#MySQL事务隔离级别" class="headerlink" title="MySQL事务隔离级别"></a>MySQL事务隔离级别</h3><table>
+<thead>
+<tr>
+<th style="text-align:left">事务隔离级别</th>
+<th style="text-align:center">脏读</th>
+<th style="text-align:center">不可重复读</th>
+<th style="text-align:center">幻读</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">读未提交(read-uncommitted)</td>
+<td style="text-align:center">是</td>
+<td style="text-align:center">是</td>
+<td style="text-align:center">是</td>
+</tr>
+<tr>
+<td style="text-align:left">不可重复读(read-committed)</td>
+<td style="text-align:center">否</td>
+<td style="text-align:center">是</td>
+<td style="text-align:center">是</td>
+</tr>
+<tr>
+<td style="text-align:left">可重复读(repeatable-read)</td>
+<td style="text-align:center">否</td>
+<td style="text-align:center">否</td>
+<td style="text-align:center">是</td>
+</tr>
+<tr>
+<td style="text-align:left">串行化(serializable)</td>
+<td style="text-align:center">否</td>
+<td style="text-align:center">否</td>
+<td style="text-align:center">否</td>
+</tr>
+</tbody>
+</table>
+<p>MySQL默认的事务隔离级别为repeatable-read; $ select @@tx_isolation</p>
+<h3 id="聚合函数"><a href="#聚合函数" class="headerlink" title="聚合函数"></a>聚合函数</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">聚合函数 count(), 求数据表的行数</span><br><span class="line">聚合函数 max(), 求某列的最大数值</span><br><span class="line">聚合函数 min(), 求某列的最小值</span><br><span class="line">聚合函数 sum(), 对数据表的某列进行求和操作</span><br><span class="line">聚合函数 avg()，对数据，表的某列进行求平均值操作</span><br></pre></td></tr></table></figure>
 <h3 id="MySQL优化方法"><a href="#MySQL优化方法" class="headerlink" title="MySQL优化方法"></a>MySQL优化方法</h3><blockquote>
-<p>太泛了，开启<code>慢查询</code>，然后学习用<code>explain</code>分析SQL语句就好了</p>
+<p>太泛了, 关键两点: 开启<code>慢查询</code>，然后学习用<code>explain</code>分析SQL语句就好了</p>
 </blockquote>
 <blockquote>
-<p>一些基本原则：将复杂性较给代码交给编程语言去处理；正确的使用索引</p>
+<p>一些基本原则: 将复杂性较给代码交给编程语言去处理\尽量不要将逻辑放到sql, 为了解耦, 解耦是方便扩展; 正确的使用索引</p>
 </blockquote>
-<h2 id="Linux"><a href="#Linux" class="headerlink" title="Linux"></a>Linux</h2><h3 id="Linux-下如何清空一个文件的命令，监视一个日志文件-a-log-的最新内容"><a href="#Linux-下如何清空一个文件的命令，监视一个日志文件-a-log-的最新内容" class="headerlink" title="Linux 下如何清空一个文件的命令，监视一个日志文件 a.log 的最新内容?"></a>Linux 下如何清空一个文件的命令，监视一个日志文件 a.log 的最新内容?</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">echo "" &gt; a.log 或 &gt; a.log</span><br><span class="line">tail -n 50 -f a.log 显示文件 a.log 的后 50 行内容并在文件内容增加后，自动显示新增的文件内容。</span><br><span class="line">tail: -n 是显示行号；相当于 nl 命令；例子如下：</span><br><span class="line">tail -100f test.log 实时监控 100 行日志</span><br><span class="line">tail -n 10 test.log 查询日志尾部最后 10 行的日志；</span><br><span class="line">-n +10 test.log 查询 10 行之后的所有日志；</span><br><span class="line">head: 跟 tail 是相反的，tail 是看后多少行日志；例子如下：</span><br><span class="line">head -n 10 test.log 查询日志文件中的头 10 行日志；</span><br><span class="line">head -n -10 test.log 查询日志文件除了最后 10 行的其他所有日志；</span><br><span class="line">cat： cat -n test.log |grep "debug" 查询关键字的日志</span><br></pre></td></tr></table></figure>
-<h3 id="10g-的访问日志文件中？查看访问日志中访问次数前十的-IP？"><a href="#10g-的访问日志文件中？查看访问日志中访问次数前十的-IP？" class="headerlink" title="10g 的访问日志文件中？查看访问日志中访问次数前十的 IP？"></a>10g 的访问日志文件中？查看访问日志中访问次数前十的 IP？</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cat access_log | awk '&#123;print $1&#125;' | uniq -c|sort -rn|head -10</span><br></pre></td></tr></table></figure>
-<h3 id="查看当前服务器的-http-链接有哪些？"><a href="#查看当前服务器的-http-链接有哪些？" class="headerlink" title="查看当前服务器的 http 链接有哪些？"></a>查看当前服务器的 http 链接有哪些？</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">netstat -n|grep 80</span><br></pre></td></tr></table></figure>
+<h2 id="Linux-服务器运维"><a href="#Linux-服务器运维" class="headerlink" title="Linux\服务器运维"></a>Linux\服务器运维</h2><h3 id="Linux-下如何清空一个文件的命令，监视一个日志文件-a-log-的最新内容"><a href="#Linux-下如何清空一个文件的命令，监视一个日志文件-a-log-的最新内容" class="headerlink" title="Linux 下如何清空一个文件的命令，监视一个日志文件 a.log 的最新内容?"></a>Linux 下如何清空一个文件的命令，监视一个日志文件 a.log 的最新内容?</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">echo "" &gt; a.log 或 &gt; a.log</span><br><span class="line"></span><br><span class="line">tail -n 50 -f a.log 显示文件 a.log 的后 50 行内容并在文件内容增加后，自动显示新增的文件内容。</span><br><span class="line">tail: -n 是显示行号；相当于 nl 命令；例子如下：</span><br><span class="line">tail -100f test.log 实时监控 100 行日志 -&gt; 常用</span><br><span class="line">tail -n 10 test.log 查询日志尾部最后 10 行的日志;</span><br><span class="line">-n +10 test.log 查询 10 行之后的所有日志;</span><br><span class="line"></span><br><span class="line">head: 跟 tail 是相反的，tail 是看后多少行日志; 例子如下：</span><br><span class="line">head -n 10 test.log 查询日志文件中的头 10 行日志；</span><br><span class="line">head -n -10 test.log 查询日志文件除了最后 10 行的其他所有日志;</span><br><span class="line"></span><br><span class="line">cat： cat -n test.log |grep "debug" 查询关键字的日志</span><br></pre></td></tr></table></figure>
+<h3 id="10g-的访问日志文件中-查看访问日志中访问次数前十的-IP"><a href="#10g-的访问日志文件中-查看访问日志中访问次数前十的-IP" class="headerlink" title="10g 的访问日志文件中? 查看访问日志中访问次数前十的 IP?"></a>10g 的访问日志文件中? 查看访问日志中访问次数前十的 IP?</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cat access_log | awk '&#123;print $1&#125;' | uniq -c|sort -rn|head -10</span><br></pre></td></tr></table></figure>
+<h3 id="查看当前服务器的-http-链接有哪些"><a href="#查看当前服务器的-http-链接有哪些" class="headerlink" title="查看当前服务器的 http 链接有哪些?"></a>查看当前服务器的 http 链接有哪些?</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">netstat -n|grep 80</span><br></pre></td></tr></table></figure>
 
       
     </div>
@@ -461,6 +490,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2019/12/12/面试散记-综合篇-附带个人讲解点评/" rel="prev" title="面试散记-综合篇-附带个人讲解点评">
+                面试散记-综合篇-附带个人讲解点评 <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -537,7 +570,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">5</span>
+                  <span class="site-state-item-count">6</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -574,7 +607,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#PHP"><span class="nav-text">PHP</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#PHP面向对象的一些概述"><span class="nav-text">PHP面向对象的一些概述</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Memcache与Redis"><span class="nav-text">Memcache与Redis</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#什么是CGI？什么是-FastCGI？php-fpm，FastCGI，Nginx-之间是什么关系"><span class="nav-text">什么是CGI？什么是 FastCGI？php-fpm，FastCGI，Nginx 之间是什么关系</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#排序算法"><span class="nav-text">排序算法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#TCP-UDP区别"><span class="nav-text">TCP/UDP区别</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#三次握手，四次挥手，为什么是三次握手四次挥手"><span class="nav-text">三次握手，四次挥手，为什么是三次握手四次挥手</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#设计模式之观察者模式-发布订阅"><span class="nav-text">设计模式之观察者模式(发布订阅)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#PHP基础"><span class="nav-text">PHP基础</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#如何确保多个进程同时写一个文件成功-手写个文件锁"><span class="nav-text">如何确保多个进程同时写一个文件成功(手写个文件锁)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#无限分类的实现原理（常用方法）"><span class="nav-text">无限分类的实现原理（常用方法）</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#MySQL"><span class="nav-text">MySQL</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#MySQL中myisam与innodb的区别"><span class="nav-text">MySQL中myisam与innodb的区别</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#聚合函数"><span class="nav-text">聚合函数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#MySQL优化方法"><span class="nav-text">MySQL优化方法</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Linux"><span class="nav-text">Linux</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Linux-下如何清空一个文件的命令，监视一个日志文件-a-log-的最新内容"><span class="nav-text">Linux 下如何清空一个文件的命令，监视一个日志文件 a.log 的最新内容?</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#10g-的访问日志文件中？查看访问日志中访问次数前十的-IP？"><span class="nav-text">10g 的访问日志文件中？查看访问日志中访问次数前十的 IP？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#查看当前服务器的-http-链接有哪些？"><span class="nav-text">查看当前服务器的 http 链接有哪些？</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#服务端编程-web-PHP为主"><span class="nav-text">服务端编程(web\PHP为主)</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#PHP面向对象的一些概述"><span class="nav-text">PHP面向对象的一些概述</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Memcache-与-Redis"><span class="nav-text">Memcache 与 Redis</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#什么是CGI-什么是-FastCGI-php-fpm-FastCGI-Nginx-之间是什么关系"><span class="nav-text">什么是CGI? 什么是 FastCGI? php-fpm, FastCGI, Nginx 之间是什么关系</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#排序算法"><span class="nav-text">排序算法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#TCP-UDP区别"><span class="nav-text">TCP/UDP区别</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#三次握手，四次挥手，为什么是三次握手四次挥手"><span class="nav-text">三次握手，四次挥手，为什么是三次握手四次挥手</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#设计模式之发布订阅"><span class="nav-text">设计模式之发布订阅</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#PHP基础"><span class="nav-text">PHP基础</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#如何确保多个进程同时写一个文件成功-手写个文件锁"><span class="nav-text">如何确保多个进程同时写一个文件成功(手写个文件锁)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#PHP实现异步的几种方式"><span class="nav-text">PHP实现异步的几种方式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#无限分类的实现原理（常用方法）"><span class="nav-text">无限分类的实现原理（常用方法）</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#MySQL"><span class="nav-text">MySQL</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#MySQL中myisam与innodb的区别"><span class="nav-text">MySQL中myisam与innodb的区别</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#事务的基本要素-ACID-Atomicity-Consistency-Isolation-Durability"><span class="nav-text">事务的基本要素(ACID) Atomicity Consistency Isolation Durability</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#事务的并发问题"><span class="nav-text">事务的并发问题</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#MySQL事务隔离级别"><span class="nav-text">MySQL事务隔离级别</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#聚合函数"><span class="nav-text">聚合函数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#MySQL优化方法"><span class="nav-text">MySQL优化方法</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Linux-服务器运维"><span class="nav-text">Linux\服务器运维</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Linux-下如何清空一个文件的命令，监视一个日志文件-a-log-的最新内容"><span class="nav-text">Linux 下如何清空一个文件的命令，监视一个日志文件 a.log 的最新内容?</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#10g-的访问日志文件中-查看访问日志中访问次数前十的-IP"><span class="nav-text">10g 的访问日志文件中? 查看访问日志中访问次数前十的 IP?</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#查看当前服务器的-http-链接有哪些"><span class="nav-text">查看当前服务器的 http 链接有哪些?</span></a></li></ol></li></ol></div>
             
 
           </div>
@@ -594,7 +627,7 @@
 
     <footer id="footer" class="footer">
       <div class="footer-inner">
-        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2020</span>
   <span class="with-love">
     <i class="fa fa-user"></i>
   </span>
